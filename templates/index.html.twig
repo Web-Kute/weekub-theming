@@ -4,7 +4,16 @@
 {{ include('modules/header.html.twig') }}
   {% block content %}
   <main role="main">
-    {% include 'organisms/section.html.twig' %}
+    {% include 'organisms/section.html.twig' with {'title': 'About', "id" : 'about', "section_content": 'content/article_about.html'} %}
+
+    {% include 'organisms/section.html.twig' with {'title': 'Compétences', 'id':'skills', "section_content": 'content/article_skills.html'} %}
+
+    {% include 'organisms/section.html.twig' with {'title': 'Réalisations', 'id':'customers', "section_content": 'content/article_customers.html'} %}
+
+    {% include 'organisms/section.html.twig' with {'title': 'Contact', 'id':'contact', "section_content": 'content/article_contact.html'} %}
   </main>
+  {% endblock %}
+  {% block footer %}
+  {% include "content/footer.html" %}
   {% endblock %}
 {% endblock %}
