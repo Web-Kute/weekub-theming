@@ -1,5 +1,10 @@
 {% extends "base.html.twig" %}
 {% block body %}
+{{ include ("atoms/svg.html")}}
 {{ include('modules/header.html.twig') }}
-{% block content %}Content{% endblock %}
+  {% block content %}
+  <main role="main">
+    {% include 'organisms/section.html.twig' %}
+  </main>
+  {% endblock %}
 {% endblock %}

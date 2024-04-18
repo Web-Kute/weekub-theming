@@ -8,7 +8,9 @@ const { postcss } = require('autoprefixer');
 
 const isProduction = process.env.NODE_ENV == 'production';
 
-const stylesHandler = 'style-loader';
+const stylesHandler = isProduction
+  ? MiniCssExtractPlugin.loader
+  : 'style-loader';
 
 const config = {
   mode: 'development',
@@ -21,12 +23,19 @@ const config = {
   },
   devtool: 'source-map',
   devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'public'),
+    },
     port: 3000,
     open: true,
     hot: true,
     host: 'localhost',
     compress: true,
     historyApiFallback: true,
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new CssMinimizerPlugin()],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -36,14 +45,24 @@ const config = {
       template: path.resolve(__dirname, 'templates', 'index.html.twig'),
     }),
 
-    // Add your plugins here
+    new MiniCssExtractPlugin({
+      filename: '../css/style.min.css',
+      chunkFilename: '[id].css',
+    }),
+    require('autoprefixer'),
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/i,
-        loader: 'babel-loader',
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
       {
         test: /\.s[ac]ss$/i,
@@ -54,8 +73,12 @@ const config = {
         use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: 'asset',
+        test: /\.(ico|png|svg|jpg|jpeg|gif|webp)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
       },
 
       // Add your rules for custom modules here
