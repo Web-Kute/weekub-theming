@@ -1,0 +1,2 @@
+[1minstall-peerdeps v3.0.3[22m
+[1m[31mERR[39m[22m Too many arguments. Please specify ONE package at a time to install with peerDeps. Alternatively, pass extra arguments with --extra-args "<extra_args>".

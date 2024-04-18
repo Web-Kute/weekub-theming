@@ -1,0 +1,66 @@
+@use 'breakpoints';
+
+@mixin mobile-only {
+  @media (max-width: map-get(breakpoints.$breakpoints, 'mobile-only')) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-down {
+  @media (max-width: map-get(breakpoints.$breakpoints, 'tablet-portrait-down')) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-up {
+  @media (min-width: map-get(breakpoints.$breakpoints, 'tablet-portrait-up')) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-only {
+  @media (min-width: map-get(breakpoints.$breakpoints, 'tablet-portrait-up')) and (max-width: map-get(breakpoints.$breakpoints, 'tablet-portrait-down')) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: map-get(breakpoints.$breakpoints, 'desktop-up')) {
+    @content;
+  }
+}
+
+@mixin orientation-landscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-down {
+  @media (max-width: map-get(breakpoints.$breakpoints, 'tablet-landscape-down')) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-only {
+  @media (min-width: map-get(breakpoints.$breakpoints, 'tablet-landscape-up')) and (max-width: map-get(breakpoints.$breakpoints, 'tablet-landscape-down')) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
+@mixin crossBurger($deg) {
+  position: absolute;
+  transform: rotate($deg);
+  top: 15px;
+}
+
+@mixin margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}

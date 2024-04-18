@@ -1,0 +1,51 @@
+@use "colors";
+
+$themes: (
+  theme-light: theme-light,
+  theme-dark: theme-dark,
+);
+
+@function setStyle($map, $object, $style) {
+  @if map-has-key($map, $object) {
+    @return map-get(map-get($map, $object), $style);
+  }
+  @warn "The key ´#{$object} is not present in the map...";
+  @return null;
+}
+
+$config: (
+  theme-light: (
+    backgroundColor:
+      map-get(
+        $map: colors.$colors,
+        $key: 'white',
+      ),
+    colorText:
+      map-get(
+        $map: colors.$colors,
+        $key: 'wet-asphalt',
+      ),
+  ),
+  theme-dark: (
+    backgroundColor:
+      map-get(
+        $map: colors.$colors,
+        $key: 'black-pearl',
+      ),
+    colorText:
+      map-get(
+        $map: colors.$colors,
+        $key: 'white',
+      ),
+  ),
+);
+
+@each $key, $value in $themes {
+  @if (map-has-key($config, $key)) {
+    .#{$value} {
+      background-color: setStyle($config, $key, backgroundColor);
+      color: setStyle($config, $key, colorText);
+    }
+  }
+  @warn 'No config found for theme: #{$value}' if not map-has-key($config, $key);
+}
