@@ -1,8 +1,8 @@
-/******/ (() => { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 786:
-/***/ ((module, exports, __webpack_require__) => {
+/***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
  * matchesSelector v2.0.2
@@ -177,7 +177,7 @@ return EvEmitter;
 /***/ }),
 
 /***/ 977:
-/***/ ((module, exports, __webpack_require__) => {
+/***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
  * Fizzy UI utils v2.0.7
@@ -414,7 +414,7 @@ return utils;
 /***/ }),
 
 /***/ 485:
-/***/ ((module, exports, __webpack_require__) => {
+/***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * getSize v2.0.3
@@ -626,7 +626,7 @@ return getSize;
 /***/ }),
 
 /***/ 994:
-/***/ ((module, exports, __webpack_require__) => {
+/***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * Masonry v4.2.2
@@ -862,7 +862,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /***/ }),
 
 /***/ 169:
-/***/ ((module, exports, __webpack_require__) => {
+/***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
  * Outlayer Item
@@ -1411,7 +1411,7 @@ return Item;
 /***/ }),
 
 /***/ 831:
-/***/ ((module, exports, __webpack_require__) => {
+/***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * Outlayer v2.1.1
@@ -2366,7 +2366,7 @@ return Outlayer;
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
+!function() {
 "use strict";
 
 ;// CONCATENATED MODULE: ./templates/js/Customers.js
@@ -4217,7 +4217,7 @@ class Config {
         }
     }
 }
-/* harmony default export */ const BaseConfig = (Config);
+/* harmony default export */ var BaseConfig = (Config);
 
 ;// CONCATENATED MODULE: ./node_modules/@cloudinary/url-gen/internal/internalConstants.js
 /**
@@ -4339,7 +4339,7 @@ class URLConfig extends BaseConfig {
         return this;
     }
 }
-/* harmony default export */ const config_URLConfig = (URLConfig);
+/* harmony default export */ var config_URLConfig = (URLConfig);
 
 ;// CONCATENATED MODULE: ./node_modules/@cloudinary/url-gen/sdkAnalytics/stringPad.js
 /**
@@ -6317,7 +6317,7 @@ class BlurredBackgroundAction extends BackgroundQualifier {
         return `b_blurred${intensity}${brightness}`;
     }
 }
-/* harmony default export */ const shared_BlurredBackgroundAction = (BlurredBackgroundAction);
+/* harmony default export */ var shared_BlurredBackgroundAction = (BlurredBackgroundAction);
 
 ;// CONCATENATED MODULE: ./node_modules/@cloudinary/transformation-builder-sdk/qualifiers/background/shared/base/BaseCommonBackground.js
 
@@ -7468,8 +7468,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   weekub.events();
 });
-})();
-
+}();
 /******/ })()
 ;
 //# sourceMappingURL=main.js.map

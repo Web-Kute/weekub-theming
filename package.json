@@ -41,6 +41,7 @@
     "mini-css-extract-plugin": "^2.9.0",
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^9.5.6",
     "prettier": "^3.2.5",
     "sass": "^1.72.0",
     "sass-loader": "^14.2.1",
@@ -52,5 +53,13 @@
   "dependencies": {
     "@cloudinary/url-gen": "^1.19.0",
     "cloudinary": "^2.1.0"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not ie < 11",
+    "last 2 versions",
+    "> 1%",
+    "iOS 7",
+    "last 3 iOS versions"
+  ]
 }

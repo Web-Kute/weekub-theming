@@ -47,5 +47,5 @@ $config: (
       color: setStyle($config, $key, colorText);
     }
   }
-  @warn 'No config found for theme: #{$value}' if not map-has-key($config, $key);
+  // @warn 'No config found for theme: #{$value}' if not map-has-key($config, $key);
 }
