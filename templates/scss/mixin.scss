@@ -103,9 +103,9 @@
   margin-right: auto;
 }
 
-@mixin map-colors($keycolor) {
+@mixin map-colors($property, $keycolor) {
   @if (map-has-key(colors.$colors, $keycolor)) {
-    color: map-get(colors.$colors, $keycolor);
+    #{$property}: map-get(colors.$colors, $keycolor);
   }
   // @warn "Unknown color key`#{$keycolor}` in $colors.";
 }

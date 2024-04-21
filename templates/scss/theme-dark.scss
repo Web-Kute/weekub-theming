@@ -4,72 +4,71 @@
 .theme-dark {
   a {
     &.contact__link {
-      @include mixin.map-colors('white');
+      @include mixin.map-colors('color', 'white');
       transition: color 200ms ease;
       &:hover {
         color: map-get($map: colors.$colors, $key: 'logocolor');
       }
     }
     &.arrow-up {
-      @include mixin.map-colors('white');
+      @include mixin.map-colors('color', 'white');
       &:hover {
-        color: map-get($map: colors.$colors, $key: 'logocolor');
+        @include mixin.map-colors('color', 'logocolor');
       }
     }
   }
 
   .nav-open {
     .togglemenu__bar {
-      background-color: map-get($map: colors.$colors, $key: 'black-pearl');
+      @include mixin.map-colors('background-color', 'black-pearl');
     }
   }
 
   .togglemenu__bar {
-    background-color: map-get($map: colors.$colors, $key: 'white');
+    @include mixin.map-colors('background-color', 'white');
   }
 
   .about__content {
     ul > li span {
-      @include mixin.map-colors('white');
+      @include mixin.map-colors('color', 'white');
     }
     svg {
-      @include mixin.map-colors('white');
+      @include mixin.map-colors('color', 'white');
     }
   }
 
   h1 {
-    @include mixin.map-colors('white');
+    @include mixin.map-colors('color', 'white');
   }
 
   h2 {
-    @include mixin.map-colors('white');
+    @include mixin.map-colors('color', 'white');
   }
 
   header h2 {
-    @include mixin.map-colors(carrot);
+    @include mixin.map-colors('color', 'carrot');
   }
 
   h3 {
-    // color: map-get($map: colors.$colors, $key: 'carrot');
-    @include mixin.map-colors('carrot');
+    @include mixin.map-colors('color', 'carrot');
     &.contact__name {
-      @include mixin.map-colors('white');
+      @include mixin.map-colors('color', 'white');
     }
   }
 
   #skills-container .skills {
-    background-color: map-get($map: colors.$colors, $key: 'clouds');
+    @include mixin.map-colors('background-color', 'clouds');
     &__star {
-      color: map-get($map: colors.$colors, $key: 'belize-hole');
+      @include mixin.map-colors('color', 'belize-hole');
     }
     ul,
     p {
-      color: map-get($map: colors.$colors, $key: 'black-pearl');
+      @include mixin.map-colors('color', 'black-pearl');
     }
   }
 
   .customers__summary {
-    color: map-get($map: colors.$colors, $key: 'black-pearl');
+    @include mixin.map-colors('color', 'black-pearl');
   }
 
   #contact {
