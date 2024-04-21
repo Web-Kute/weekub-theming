@@ -65,6 +65,11 @@ const config = {
         },
       },
       {
+        test: /\.js$/,
+        enforce: 'pre',
+        use: ['source-map-loader'],
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [stylesHandler, 'css-loader', 'postcss-loader', 'sass-loader'],
       },

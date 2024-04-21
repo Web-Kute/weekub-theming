@@ -20,7 +20,7 @@ export const customersItem = [
   },
   {
     customerId: 2,
-    title: 'France TV - Audiovisuel | 2022',
+    title: 'France TV | 2022',
     description: `<li>Développement du player direct-radio</li><li>Mise en place de l'accessibilité</li><li>Optimisation de la performance</li><li>Twig | CSS / Sass | JavaScript</li>`,
     imageURL: IMAGE_URL + '14',
     url: 'https://la1ere.francetvinfo.fr/direct-radio/',
@@ -36,7 +36,7 @@ export const customersItem = [
   },
   {
     customerId: 4,
-    title: 'Christian Louboutin - luxe | 2019',
+    title: 'Christian Louboutin | 2019',
     description: `<li>Développement de la FAQ</li><li>Intégration de templates pour Emails transactionnels</li><li>HTML | CSS | jQuery </li>`,
     imageURL: IMAGE_URL + '17',
     url: 'https://eu.christianlouboutin.com/fr_fr/',
@@ -44,7 +44,7 @@ export const customersItem = [
   },
   {
     customerId: 5,
-    title: 'Louis Vuitton - luxe | 2018 - 2019',
+    title: 'Louis Vuitton | 2018 - 2019',
     description: `<li>Site carrière LVMH from scratch</li><li>Mise en place de l'accessibilité</li><li>HTML | CSS / Less | jQuery</li>`,
     imageURL: IMAGE_URL + '18',
     url: 'https://fr.louisvuitton.com/fra-fr/homepage',
@@ -156,7 +156,7 @@ export const customersItem = [
   },
   {
     customerId: 19,
-    title: 'Canal + - Audiovisuel | 2007',
+    title: 'Canal + | 2007',
     description: `<li>Intégration landing page</li><li>HTML | CSS</li>`,
     imageURL: IMAGE_URL + '9',
     url: 'https://www.canalplus.com/',

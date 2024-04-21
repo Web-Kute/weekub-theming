@@ -1,16 +1,17 @@
 @use 'colors';
+@use 'mixin';
 
 .theme-dark {
   a {
     &.contact__link {
-      color: map-get($map: colors.$colors, $key: 'white');
+      @include mixin.map-colors('white');
       transition: color 200ms ease;
       &:hover {
         color: map-get($map: colors.$colors, $key: 'logocolor');
       }
     }
     &.arrow-up {
-      color: map-get($map: colors.$colors, $key: 'white');
+      @include mixin.map-colors('white');
       &:hover {
         color: map-get($map: colors.$colors, $key: 'logocolor');
       }
@@ -29,29 +30,30 @@
 
   .about__content {
     ul > li span {
-      color: map-get($map: colors.$colors, $key: 'white');
+      @include mixin.map-colors('white');
     }
     svg {
-      color: map-get($map: colors.$colors, $key: 'white');
+      @include mixin.map-colors('white');
     }
   }
 
   h1 {
-    color: map-get($map: colors.$colors, $key: 'white');
+    @include mixin.map-colors('white');
   }
 
   h2 {
-    color: map-get($map: colors.$colors, $key: 'white');
+    @include mixin.map-colors('white');
   }
 
   header h2 {
-    color: map-get($map: colors.$colors, $key: 'carrot');
+    @include mixin.map-colors(carrot);
   }
 
   h3 {
-    color: map-get($map: colors.$colors, $key: 'carrot');
+    // color: map-get($map: colors.$colors, $key: 'carrot');
+    @include mixin.map-colors('carrot');
     &.contact__name {
-      color: map-get($map: colors.$colors, $key: 'white');
+      @include mixin.map-colors('white');
     }
   }
 

@@ -9,7 +9,7 @@ html {
 
 body {
   font-family: 'Roboto', 'Droid Sans', 'Heveltica', Arial;
-  color: map-get(colors.$colors, $key: 'wet-asphalt');
+  @include mixin.map-colors('wet-asphalt');
   transition: background-color 600ms ease-out;
 }
 
@@ -18,14 +18,14 @@ body {
 }
 
 a {
-  color: map-get($map: colors.$colors, $key: 'midnight-blue');
+  @include mixin.map-colors('midnight-blue');
   transition: color 200ms ease;
   text-decoration: none;
   &:hover {
-    color: map-get($map: colors.$colors, $key: 'logocolor');
+    @include mixin.map-colors('logocolor');
   }
   &:active {
-    color: map-get($map: colors.$colors, $key: 'carrot');
+    @include mixin.map-colors('carrot');
   }
 }
 
@@ -57,7 +57,7 @@ blockquote {
 h1,
 h2 {
   font-family: 'Roboto Light', 'Droid Sans', 'Heveltica', Arial;
-  color: map-get($map: colors.$colors, $key: 'belize-hole');
+  @include mixin.map-colors('belize-hole');
 }
 
 h1 {
@@ -82,7 +82,7 @@ h3 {
   font-size: 1.05rem;
   font-family: 'Roboto Medium', 'Droid Sans', 'Heveltica', Arial;
   text-transform: uppercase;
-  color: map-get(colors.$colors, $key: 'belize-hole');
+  @include mixin.map-colors('belize-hole');
   margin-bottom: 0.5rem;
 }
 
@@ -130,7 +130,7 @@ header {
     }
   }
   figcaption {
-    color: map-get($map: colors.$colors, $key: 'logocolor');
+    @include mixin.map-colors('logocolor');
     text-align: center;
     letter-spacing: 1px;
   }
@@ -208,7 +208,7 @@ main {
     text-transform: uppercase;
     line-height: 35px;
     &.active {
-      color: map-get($map: colors.$colors, $key: 'logocolor');
+      @include mixin.map-colors('logocolor');
     }
   }
   li {
@@ -217,9 +217,9 @@ main {
 
   a {
     text-decoration: none;
-    color: map-get($map: colors.$colors, $key: 'belize-hole');
+    @include mixin.map-colors('belize-hole');
     &:hover {
-      color: map-get($map: colors.$colors, $key: 'logocolor');
+      @include mixin.map-colors('logocolor');
     }
   }
 }
@@ -319,10 +319,10 @@ section {
     ul > li {
       line-height: 25px;
       list-style-type: square;
-      color: map-get(colors.$colors, $key: 'logocolor');
+      @include mixin.map-colors('logocolor');
       margin-left: 2rem;
       span {
-        color: map-get(colors.$colors, $key: 'wet-asphalt');
+        @include mixin.map-colors('wet-asphalt');
       }
     }
   }
@@ -394,7 +394,7 @@ section {
         text-align: center;
         font-size: 1rem;
         text-transform: uppercase;
-        color: map-get($map: colors.$colors, $key: 'belize-hole');
+        @include mixin.map-colors('belize-hole');
         background-color: map-get($map: colors.$colors, $key: 'white');
       }
       img {
@@ -442,12 +442,12 @@ section {
 }
 
 #contact {
-  background-image: url("https://res.cloudinary.com/dwwhn7b5v/image/upload/docs/models-3");
+  background-image: url('https://res.cloudinary.com/dwwhn7b5v/image/upload/docs/models-3');
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 3rem;
   @include mixin.tablet-landscape-down() {
-    background-image: url("https://res.cloudinary.com/dwwhn7b5v/image/upload/docs/models-4");
+    background-image: url('https://res.cloudinary.com/dwwhn7b5v/image/upload/docs/models-4');
     background-position: center;
   }
 }
@@ -565,7 +565,7 @@ section {
     line-height: 25px;
     border-radius: 6px;
     text-decoration: none;
-    background-color: map-get($map: colors.$colors, $key: 'logocolor');
+    background-color: map-get($map: colors.$colors, $key: 'logocolor');;
     transition: background-color 200ms ease-in-out;
     &:hover {
       background-color: map-get($map: colors.$colors, $key: 'belize-hole');
@@ -590,7 +590,7 @@ footer {
       margin-right: 0.5rem;
     }
     &:hover {
-      color: map-get($map: colors.$colors, $key: 'belize-hole');
+      @include mixin.map-colors('belize-hole');
     }
     &:hover svg {
       fill: map-get($map: colors.$colors, $key: 'belize-hole');

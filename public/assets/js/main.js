@@ -1,7 +1,7 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 786:
+/***/ 464:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -59,7 +59,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
-/***/ 137:
+/***/ 635:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -176,7 +176,7 @@ return EvEmitter;
 
 /***/ }),
 
-/***/ 977:
+/***/ 883:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -193,7 +193,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
   if ( true ) {
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(786)
+      __webpack_require__(464)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( matchesSelector ) {
       return factory( window, matchesSelector );
     }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
@@ -413,7 +413,7 @@ return utils;
 
 /***/ }),
 
-/***/ 485:
+/***/ 975:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -625,7 +625,7 @@ return getSize;
 
 /***/ }),
 
-/***/ 994:
+/***/ 684:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -642,8 +642,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   if ( true ) {
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-        __webpack_require__(831),
-        __webpack_require__(485)
+        __webpack_require__(377),
+        __webpack_require__(975)
       ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
@@ -861,7 +861,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 169:
+/***/ 403:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -874,8 +874,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   if ( true ) {
     // AMD - RequireJS
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-        __webpack_require__(137),
-        __webpack_require__(485)
+        __webpack_require__(635),
+        __webpack_require__(975)
       ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
@@ -1410,7 +1410,7 @@ return Item;
 
 /***/ }),
 
-/***/ 831:
+/***/ 377:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -1426,10 +1426,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
   if ( true ) {
     // AMD - RequireJS
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-        __webpack_require__(137),
-        __webpack_require__(485),
-        __webpack_require__(977),
-        __webpack_require__(169)
+        __webpack_require__(635),
+        __webpack_require__(975),
+        __webpack_require__(883),
+        __webpack_require__(403)
       ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( EvEmitter, getSize, utils, Item ) {
         return factory( window, EvEmitter, getSize, utils, Item);
       }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
@@ -2390,7 +2390,7 @@ var customersItem = [{
   label: 'Antalis'
 }, {
   customerId: 2,
-  title: 'France TV - Audiovisuel | 2022',
+  title: 'France TV | 2022',
   description: "<li>D\xE9veloppement du player direct-radio</li><li>Mise en place de l'accessibilit\xE9</li><li>Optimisation de la performance</li><li>Twig | CSS / Sass | JavaScript</li>",
   imageURL: IMAGE_URL + '14',
   url: 'https://la1ere.francetvinfo.fr/direct-radio/',
@@ -2404,14 +2404,14 @@ var customersItem = [{
   label: 'Action contre la faim'
 }, {
   customerId: 4,
-  title: 'Christian Louboutin - luxe | 2019',
+  title: 'Christian Louboutin | 2019',
   description: "<li>D\xE9veloppement de la FAQ</li><li>Int\xE9gration de templates pour Emails transactionnels</li><li>HTML | CSS | jQuery </li>",
   imageURL: IMAGE_URL + '17',
   url: 'https://eu.christianlouboutin.com/fr_fr/',
   label: 'Christian Louboutin'
 }, {
   customerId: 5,
-  title: 'Louis Vuitton - luxe | 2018 - 2019',
+  title: 'Louis Vuitton | 2018 - 2019',
   description: "<li>Site carri\xE8re LVMH from scratch</li><li>Mise en place de l'accessibilit\xE9</li><li>HTML | CSS / Less | jQuery</li>",
   imageURL: IMAGE_URL + '18',
   url: 'https://fr.louisvuitton.com/fra-fr/homepage',
@@ -2509,7 +2509,7 @@ var customersItem = [{
   label: 'BNP Paribas'
 }, {
   customerId: 19,
-  title: 'Canal + - Audiovisuel | 2007',
+  title: 'Canal + | 2007',
   description: "<li>Int\xE9gration landing page</li><li>HTML | CSS</li>",
   imageURL: IMAGE_URL + '9',
   url: 'https://www.canalplus.com/',
@@ -7455,7 +7455,7 @@ myImage.resize(fill().width(300).height(169));
 // document.body.appendChild(imgElement);
 // imgElement.src = myImage.toURL();
 
-var Masonry = __webpack_require__(994);
+var Masonry = __webpack_require__(684);
 // https://masonry.desandro.com/
 
 document.addEventListener('DOMContentLoaded', function () {
