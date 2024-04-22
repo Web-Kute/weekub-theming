@@ -28,6 +28,18 @@
     @include mixin.map-colors('background-color', 'white');
   }
 
+  header {
+    .logo {
+      // background: rgb(30, 39, 46);
+      background: linear-gradient(
+        180deg,
+        rgba(30, 39, 46, 1) 0%,
+        rgba(30, 39, 46, 0.9) 80%,
+        rgba(30, 39, 46, 0.2) 100%
+      );
+    }
+  }
+
   .about__content {
     ul > li span {
       @include mixin.map-colors('color', 'white');

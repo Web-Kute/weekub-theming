@@ -90,11 +90,12 @@ header {
   position: relative;
   display: grid;
   grid-template-columns: 5% 90% 5%;
-  margin: 20px auto 0;
+  margin: 0 auto;
   padding-bottom: 20px;
-  border-bottom: 1px solid map-get($map: colors.$colors, $key: 'silver');
+  // border-bottom: 1px solid map-get($map: colors.$colors, $key: 'silver');
   nav {
     justify-self: start;
+    margin-top: 20px;
     margin-left: 20px;
   }
   .nav-open {
@@ -115,6 +116,17 @@ header {
     column-gap: 1.5rem;
     align-items: center;
     justify-self: center;
+    position: fixed;
+    z-index: 9;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.9) 80%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    padding-bottom: 20px;
+    width: 100%;
+    justify-content: center;
     @include mixin.mobile-only() {
       flex-direction: column;
     }
@@ -143,7 +155,7 @@ header {
 
 .togglemenu {
   position: fixed;
-  z-index: 99999;
+  z-index: 30;
   width: 35px;
   height: 30px;
   cursor: pointer;
@@ -170,6 +182,7 @@ header {
 }
 main {
   width: 80%;
+  margin-top: 50px;
   @include mixin.margin-auto;
   @include mixin.mobile-only() {
     width: 97%;
@@ -196,7 +209,7 @@ main {
   left: 0;
   width: 300px;
   height: 100vh;
-  z-index: 9999;
+  z-index: 20;
   padding: 5rem 10px;
   border-left: 5px solid map-get($map: colors.$colors, $key: 'silver');
   border-top: 5px solid map-get($map: colors.$colors, $key: 'belize-hole');
@@ -222,6 +235,18 @@ main {
     &:hover {
       @include mixin.map-colors('color', 'logocolor');
     }
+  }
+}
+
+// Hack because header is fixed, we need to modify the offset of anchors
+#skills, #about, #contact, #customers {
+  &::before {
+    display: block;
+    content: ' ';
+    margin-top: -90px;
+    height: 200px;
+    visibility: hidden;
+    pointer-events: none;
   }
 }
 
@@ -423,7 +448,7 @@ section {
     width: 300px;
     height: 169px;
     padding: 10px;
-    z-index: 20;
+    z-index: 8;
     top: 0;
     @include mixin.map-colors('background-color', 'white');
     transform: translateY(100%);
@@ -608,7 +633,8 @@ footer {
 }
 
 #theme-toggle {
-  position: relative;
+  position: fixed;
+  z-index: 20;
   height: 24px;
   right: 20px;
   top: 20px;

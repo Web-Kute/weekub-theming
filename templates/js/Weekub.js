@@ -104,7 +104,7 @@ Weekub.prototype.addSkills = function () {
           <div class="skills__header">
             <h3 class="skills__title">${skill.title}</h3>
             <svg class="skills__icon svg" aria-hidden="true" focusable="false">
-              ${skill.icon.map((icon, i) => `<use x="${i!==0 ? (x -= 20) : (x = 0)}" xlink:href="${icon}"></use>`)}
+              ${skill.icon.map((icon, i) => `<use x="${i !== 0 ? (x -= 20) : (x = 0)}" xlink:href="${icon}"></use>`)}
             </svg>
           </div>
           <ul>
