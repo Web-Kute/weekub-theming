@@ -2557,7 +2557,7 @@ var skillItems = [{
   skillId: 6,
   title: 'Responsive',
   description: "<li>Un site web responsive s'adapte aux diff\xE9rentes tailles d'\xE9crans,\n                  smartphone, PC, tablettes ou TV</li><li>Mobile First</li><li>Compatibilit\xE9 cross-navigateur</li>",
-  icon: ['#desktop', '#mobile'],
+  icon: ['#mobile', '#desktop', '#tablet'],
   star: "&starf;&starf;&starf;&starf;&starf;"
 }, {
   skillId: 7,
@@ -2658,9 +2658,10 @@ Weekub.prototype.animFlag = function () {
 };
 Weekub.prototype.addSkills = function () {
   var _this = this;
+  var x = 0;
   skillItems.forEach(function (skill) {
-    _this.elements.skillsContainer.innerHTML += "<div class=\"skills\">\n          <div class=\"skills__header\">\n            <h3 class=\"skills__title\">".concat(skill.title, "</h3>\n            <svg class=\"skills__icon svg\" aria-hidden=\"true\" focusable=\"false\">\n              ").concat(skill.icon.map(function (icon) {
-      return "<use xlink:href=\"".concat(icon, "\"></use>");
+    _this.elements.skillsContainer.innerHTML += "<div class=\"skills\">\n          <div class=\"skills__header\">\n            <h3 class=\"skills__title\">".concat(skill.title, "</h3>\n            <svg class=\"skills__icon svg\" aria-hidden=\"true\" focusable=\"false\">\n              ").concat(skill.icon.map(function (icon, i) {
+      return "<use x=\"".concat(i !== 0 ? x -= 20 : x = 0, "\" xlink:href=\"").concat(icon, "\"></use>");
     }), "\n            </svg>\n          </div>\n          <ul>\n            ").concat(skill.description, "\n          </ul>\n          <div class=\"skills__star\">").concat(skill.star, "</div>\n        </div>");
   });
 };

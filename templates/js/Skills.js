@@ -68,7 +68,7 @@ export const skillItems = [
     title: 'Responsive',
     description: `<li>Un site web responsive s'adapte aux différentes tailles d'écrans,
                   smartphone, PC, tablettes ou TV</li><li>Mobile First</li><li>Compatibilité cross-navigateur</li>`,
-    icon: ['#desktop', '#mobile'],
+    icon: ['#mobile', '#desktop', '#tablet'],
     star: `&starf;&starf;&starf;&starf;&starf;`,
   },
   {

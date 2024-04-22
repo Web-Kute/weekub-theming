@@ -24,17 +24,17 @@ Weekub.prototype.registerElements = function () {
 Weekub.prototype.events = function () {
   this.elements.btnSwitchTheme.addEventListener(
     'change',
-    this.theming.bind(this),
+    this.theming.bind(this)
   );
   document.addEventListener('click', this.closeMenuOutSide.bind(this));
   window.addEventListener('scroll', this.navHighlighter.bind(this));
   this.elements.toggleMenu.addEventListener(
     'click',
-    this.showHideMenu.bind(this),
+    this.showHideMenu.bind(this)
   );
 
   this.elements.arrowUp.addEventListener('click', () =>
-    window.scroll({ top: 0, left: 0, behavior: 'smooth' }),
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' })
   );
 };
 
@@ -73,7 +73,7 @@ Weekub.prototype.navHighlighter = function () {
   this.elements.sections.forEach((current) => {
     const sectionTop = current.getBoundingClientRect().top + scrollY - 150;
     const itemBurgerMenu = document.querySelector(
-      `.burgermenu [data-id="${current.dataset.section}"`,
+      `.burgermenu [data-id="${current.dataset.section}"`
     );
     /* If current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it */
     if (scrollY > sectionTop && scrollY <= sectionTop + current.offsetHeight) {
@@ -89,7 +89,7 @@ Weekub.prototype.navHighlighter = function () {
 Weekub.prototype.screenOrientation = function () {
   const portrait = window.matchMedia('(orientation: portrait)');
   portrait.addEventListener('change', (e) =>
-    e.matches ? location.reload() : location.reload(),
+    e.matches ? location.reload() : location.reload()
   );
 };
 
@@ -98,12 +98,13 @@ Weekub.prototype.animFlag = function () {
 };
 
 Weekub.prototype.addSkills = function () {
+  let x = 0;
   skillItems.forEach((skill) => {
     this.elements.skillsContainer.innerHTML += `<div class="skills">
           <div class="skills__header">
             <h3 class="skills__title">${skill.title}</h3>
             <svg class="skills__icon svg" aria-hidden="true" focusable="false">
-              ${skill.icon.map((icon) => `<use xlink:href="${icon}"></use>`)}
+              ${skill.icon.map((icon, i) => `<use x="${i!==0 ? (x -= 20) : (x = 0)}" xlink:href="${icon}"></use>`)}
             </svg>
           </div>
           <ul>
