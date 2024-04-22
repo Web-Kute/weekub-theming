@@ -2371,7 +2371,7 @@ var __webpack_exports__ = {};
 
 ;// CONCATENATED MODULE: ./templates/js/Customers.js
 var BASE_URL = 'https://res.cloudinary.com/dwwhn7b5v/image/upload/';
-var IMAGE_URL = BASE_URL + 'c_fill,h_169,w_300/docs/models-';
+var IMAGE_URL = BASE_URL + 'c_fill,h_169,w_300/weekub/models-';
 /**
  * @param {number} id - The customer ID
  * @param {string} title - The customer title
@@ -2384,134 +2384,134 @@ var IMAGE_URL = BASE_URL + 'c_fill,h_169,w_300/docs/models-';
 var customersItem = [{
   customerId: 1,
   title: 'Antalis - E-commerce | 2023',
-  description: "<li>D\xE9veloppement des sliders produits,</li><li>Syst\xE8me atomic design</li><li>HTML | CSS | JavaScript / jQuery</li>Bootstrap<li></li>",
-  imageURL: IMAGE_URL + '5',
+  description: "<li>D\xE9veloppement des sliders produits,</li><li>Syst\xE8me atomic design</li><li>HTML | CSS | JavaScript / jQuery</li><li>Bootstrap</li>",
+  imageURL: IMAGE_URL + '9',
   url: 'https://www.antalis.fr',
   label: 'Antalis'
 }, {
   customerId: 2,
   title: 'France TV | 2022',
   description: "<li>D\xE9veloppement du player direct-radio</li><li>Mise en place de l'accessibilit\xE9</li><li>Optimisation de la performance</li><li>Twig | CSS / Sass | JavaScript</li>",
-  imageURL: IMAGE_URL + '14',
+  imageURL: IMAGE_URL + '17',
   url: 'https://la1ere.francetvinfo.fr/direct-radio/',
   label: 'France TV, la 1ere'
 }, {
   customerId: 3,
   title: 'Action contre la faim | 2021',
   description: "<li>D\xE9veloppement de la modale cookies</li><li>Responsive</li><li>HTML | CSS / Sass | JavaScript </li>",
-  imageURL: IMAGE_URL + '3',
+  imageURL: IMAGE_URL + '7',
   url: 'https://www.actioncontrelafaim.org/',
   label: 'Action contre la faim'
 }, {
   customerId: 4,
   title: 'Christian Louboutin | 2019',
   description: "<li>D\xE9veloppement de la FAQ</li><li>Int\xE9gration de templates pour Emails transactionnels</li><li>HTML | CSS | jQuery </li>",
-  imageURL: IMAGE_URL + '17',
+  imageURL: IMAGE_URL + '20',
   url: 'https://eu.christianlouboutin.com/fr_fr/',
   label: 'Christian Louboutin'
 }, {
   customerId: 5,
   title: 'Louis Vuitton | 2018 - 2019',
   description: "<li>Site carri\xE8re LVMH from scratch</li><li>Mise en place de l'accessibilit\xE9</li><li>HTML | CSS / Less | jQuery</li>",
-  imageURL: IMAGE_URL + '18',
+  imageURL: IMAGE_URL + '21',
   url: 'https://fr.louisvuitton.com/fra-fr/homepage',
   label: 'Louis Vuitton'
 }, {
   customerId: 6,
   title: 'Angelus Plongée | 2020',
   description: "<li>WordPress, template vierge</li><li>Optimisation de la performance</li><li>Aspect UI / UX</li><li>S.E.O naturel</li><li>HTML | CSS | jQuery | Bootstrap</li>",
-  imageURL: IMAGE_URL + '4',
+  imageURL: IMAGE_URL + '8',
   url: 'https://angelus-plongee.com/',
   label: 'Angelus Plongée'
 }, {
   customerId: 7,
   title: "J'Irai marcher sur les Toits | 2020",
   description: "<li>WordPress, template vierge</li><li>Optimisation de la performance</li><li>Aspect UI / UX</li><li>S.E.O naturel</li><li>HTML | CSS | jQuery | Bootstrap</li>",
-  imageURL: IMAGE_URL + '15',
+  imageURL: IMAGE_URL + '18',
   url: 'https://jirai.fr/',
   label: "J'Irai marcher sur les Toits"
 }, {
   customerId: 8,
   title: 'OTAA Architecture | 2017',
   description: "<li>WordPress, template vierge</li><li> HTML | CSS | jQuery</li>",
-  imageURL: IMAGE_URL + '22',
+  imageURL: IMAGE_URL + '3',
   url: 'https://www.otaa.fr/',
   label: 'OTAA architecture'
 }, {
   customerId: 9,
   title: 'Crédey & Associés | 2016',
   description: "<li>WordPress, template vierge</li><li>HTML | CSS | jQuery</li>",
-  imageURL: IMAGE_URL + '10',
+  imageURL: IMAGE_URL + '13',
   url: 'https://credey.com/fr/accueil/',
   label: 'Crédey & Associés'
 }, {
   customerId: 10,
   title: 'Dotline - Informatique | 2016',
   description: "<li>WordPress, template vierge</li><li>HTML | CSS | jQuery</li>",
-  imageURL: IMAGE_URL + '12',
+  imageURL: IMAGE_URL + '15',
   url: 'https://www.dotline.fr/',
   label: 'Dotline - Informatique'
 }, {
   customerId: 11,
   title: 'Sodexo - Restauration | 2016',
   description: "<li>Migration du site vers le CMS Jahia</li><li>Int\xE9gration du contenu</li>",
-  imageURL: IMAGE_URL + '21',
+  imageURL: IMAGE_URL + '24',
   url: 'https://fr.sodexo.com/home.html',
   label: 'Sodexo'
 }, {
   customerId: 12,
   title: 'Bouygues Telecom | 2012',
   description: "<li>Publicit\xE9 marketing</li><li>D\xE9veloppement Flash</li><li>HTML | CSS | ActionScript</li>",
-  imageURL: IMAGE_URL + '8',
+  imageURL: IMAGE_URL + '11',
   url: 'https://www.bouyguestelecom.fr/',
   label: 'Bouygues Telecom'
 }, {
   customerId: 13,
   title: 'Société Générale | 2011',
   description: "<li>Application board traders</li><li>D\xE9veloppement Flash</li><li>HTML | CSS | ActionScript</li>",
-  imageURL: IMAGE_URL + '20',
+  imageURL: IMAGE_URL + '23',
   url: 'https://www.societegenerale.com/fr',
   label: 'Société Générale'
 }, {
   customerId: 14,
   title: 'Fondation Mallet | 2010',
   description: "<li>D\xE9veloppement WordPress</li><li>HTML | CSS | Php</li>",
-  imageURL: IMAGE_URL + '13',
+  imageURL: IMAGE_URL + '16',
   url: 'https://www.fondationmallet.fr/',
   label: 'Fondation Mallet'
 }, {
   customerId: 15,
   title: 'Raoul Follereau | 2010',
   description: "<li>D\xE9veloppement WordPress</li><li>HTML | CSS | Php</li>",
-  imageURL: IMAGE_URL + '19',
+  imageURL: IMAGE_URL + '22',
   url: 'https://www.raoul-follereau.org/',
   label: 'Raoul Follereau'
 }, {
   customerId: 16,
   title: 'DNDi | 2009',
   description: "<li>D\xE9veloppement WordPress</li><li>HTML | CSS</li>",
-  imageURL: IMAGE_URL + '11',
+  imageURL: IMAGE_URL + '14',
   url: 'https://dndi.org/',
   label: 'DNDi'
 }, {
   customerId: 17,
   title: 'Lagardère - Presse | 2009',
   description: "<li>D\xE9veloppement Intranet du livre blanc</li><li>HTML | CSS | Php</li>",
-  imageURL: IMAGE_URL + '16',
+  imageURL: IMAGE_URL + '19',
   url: 'https://www.lagardere.com/',
   label: 'Lagardère'
 }, {
   customerId: 18,
   title: 'BNP Paribas - Banque | 2008',
   description: "<li>Int\xE9gration landing page</li><li>HTML | CSS</li>",
-  imageURL: IMAGE_URL + '7',
+  imageURL: IMAGE_URL + '10',
   url: 'https://mabanque.bnpparibas/',
   label: 'BNP Paribas'
 }, {
   customerId: 19,
   title: 'Canal + | 2007',
   description: "<li>Int\xE9gration landing page</li><li>HTML | CSS</li>",
-  imageURL: IMAGE_URL + '9',
+  imageURL: IMAGE_URL + '12',
   url: 'https://www.canalplus.com/',
   label: 'Canal +'
 }];
@@ -2667,7 +2667,7 @@ Weekub.prototype.addSkills = function () {
 Weekub.prototype.addCustomers = function () {
   var _this2 = this;
   customersItem.forEach(function (customer) {
-    _this2.elements.customerContent.innerHTML += "<div class=\"customers__item\">\n      <figure aria-label=\"".concat(customer.label, "\">\n            <img src=\"").concat(customer.imageURL, "\" alt=\"Vignette ").concat(customer.label, "\" width=\"300\" height=\"169\" loading=\"lazy\">\n            <figcaption>").concat(customer.label, "</figcaption>\n          </figure>\n          <div class=\"customers__description\">\n            <h3 class=\"customers__title\">").concat(customer.title, "</h3>\n            <ul class=\"customers__summary\">\n              ").concat(customer.description, "\n            </ul>\n            <a class=\"customers__link\" href=\"").concat(customer.url, "\" target=\"_blank\" rel=\"noopener\"\n              aria-label=\"Ouvrir le site dans un nouvel onglet\">\n              <svg class=\"customers__icon icon-alpha svg\" aria-hidden=\"true\" focusable=\"false\">\n                <use xlink:href=\"#link-ext\"></use>\n              </svg>\n              <span class=\"customers__url\">Ouvrir le site</span>\n            </a>\n          </div>\n      </div>");
+    _this2.elements.customerContent.innerHTML += "<div class=\"customers__item\">\n      <figure aria-label=\"".concat(customer.label, "\">\n            <img src=\"").concat(customer.imageURL, "\" alt=\"Vignette ").concat(customer.label, "\" width=\"300\" height=\"169\" loading=\"lazy\">\n            <figcaption>").concat(customer.label, "</figcaption>\n          </figure>\n          <div class=\"customers__description\">\n            <h3 class=\"customers__title\">").concat(customer.title, "</h3>\n            <ul>\n              ").concat(customer.description, "\n            </ul>\n            <a class=\"customers__link\" href=\"").concat(customer.url, "\" target=\"_blank\" rel=\"noopener\"\n              aria-label=\"Ouvrir le site dans un nouvel onglet\">\n              <svg class=\"customers__icon icon-alpha svg\" aria-hidden=\"true\" focusable=\"false\">\n                <use xlink:href=\"#link-ext\"></use>\n              </svg>\n              <span class=\"customers__url\">Ouvrir le site</span>\n            </a>\n          </div>\n      </div>");
   });
 };
 Weekub.prototype.theming = function () {

@@ -9,7 +9,7 @@ html {
 
 body {
   font-family: 'Roboto', 'Droid Sans', 'Heveltica', Arial;
-  @include mixin.map-colors('color','wet-asphalt');
+  @include mixin.map-colors('color', 'wet-asphalt');
   transition: background-color 500ms ease-out;
 }
 
@@ -18,14 +18,14 @@ body {
 }
 
 a {
-  @include mixin.map-colors('color','midnight-blue');
+  @include mixin.map-colors('color', 'midnight-blue');
   transition: color 200ms ease;
   text-decoration: none;
   &:hover {
-    @include mixin.map-colors('color','logocolor');
+    @include mixin.map-colors('color', 'logocolor');
   }
   &:active {
-    @include mixin.map-colors('color','carrot');
+    @include mixin.map-colors('color', 'carrot');
   }
 }
 
@@ -57,7 +57,7 @@ blockquote {
 h1,
 h2 {
   font-family: 'Roboto Light', 'Droid Sans', 'Heveltica', Arial;
-  @include mixin.map-colors('color','belize-hole');
+  @include mixin.map-colors('color', 'belize-hole');
 }
 
 h1 {
@@ -82,7 +82,7 @@ h3 {
   font-size: 1.05rem;
   font-family: 'Roboto Medium', 'Droid Sans', 'Heveltica', Arial;
   text-transform: uppercase;
-  @include mixin.map-colors('color','belize-hole');
+  @include mixin.map-colors('color', 'belize-hole');
   margin-bottom: 0.5rem;
 }
 
@@ -130,7 +130,7 @@ header {
     }
   }
   figcaption {
-    @include mixin.map-colors('color','logocolor');
+    @include mixin.map-colors('color', 'logocolor');
     text-align: center;
     letter-spacing: 1px;
   }
@@ -199,7 +199,8 @@ main {
   z-index: 9999;
   padding: 5rem 10px;
   border-left: 5px solid map-get($map: colors.$colors, $key: 'silver');
-  @include mixin.map-colors('background-color','white');
+  border-top: 5px solid map-get($map: colors.$colors, $key: 'belize-hole');
+  @include mixin.map-colors('background-color', 'white');
   transform: translateX(-300px);
   transition: opacity 500ms ease;
   &__item {
@@ -208,7 +209,7 @@ main {
     text-transform: uppercase;
     line-height: 35px;
     &.active {
-      @include mixin.map-colors('color','logocolor');
+      @include mixin.map-colors('color', 'logocolor');
     }
   }
   li {
@@ -217,9 +218,9 @@ main {
 
   a {
     text-decoration: none;
-    @include mixin.map-colors('color','belize-hole');
+    @include mixin.map-colors('color', 'belize-hole');
     &:hover {
-      @include mixin.map-colors('color','logocolor');
+      @include mixin.map-colors('color', 'logocolor');
     }
   }
 }
@@ -319,10 +320,10 @@ section {
     ul > li {
       line-height: 25px;
       list-style-type: square;
-      @include mixin.map-colors('color','logocolor');
+      @include mixin.map-colors('color', 'logocolor');
       margin-left: 2rem;
       span {
-        @include mixin.map-colors('color','wet-asphalt');
+        @include mixin.map-colors('color', 'wet-asphalt');
       }
     }
   }
@@ -394,8 +395,8 @@ section {
         text-align: center;
         font-size: 1rem;
         text-transform: uppercase;
-        @include mixin.map-colors('color','belize-hole');
-        @include mixin.map-colors('background-color','white');
+        @include mixin.map-colors('color', 'belize-hole');
+        @include mixin.map-colors('background-color', 'white');
       }
       img {
         width: 100%;
@@ -424,7 +425,7 @@ section {
     padding: 10px;
     z-index: 20;
     top: 0;
-    @include mixin.map-colors('background-color','white');
+    @include mixin.map-colors('background-color', 'white');
     transform: translateY(100%);
     transition: transform 500ms ease;
     ul {
@@ -442,12 +443,12 @@ section {
 }
 
 #contact {
-  background-image: url('https://res.cloudinary.com/dwwhn7b5v/image/upload/docs/models-3');
+  background-image: url('https://res.cloudinary.com/dwwhn7b5v/image/upload/weekub/models-25');
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 3rem;
   @include mixin.tablet-landscape-down() {
-    background-image: url('https://res.cloudinary.com/dwwhn7b5v/image/upload/docs/models-4');
+    background-image: url('https://res.cloudinary.com/dwwhn7b5v/image/upload/weekub/models-4');
     background-position: center;
   }
 }
@@ -524,8 +525,8 @@ section {
     }
     padding: 0.2rem 1rem;
     margin-left: 1rem;
-   @include mixin.map-colors('color','white');
-    @include mixin.map-colors('background-color','logocolor');
+    @include mixin.map-colors('color', 'white');
+    @include mixin.map-colors('background-color', 'logocolor');
     text-align: center;
     font-size: 1.1rem;
     line-height: 25px;
@@ -535,7 +536,7 @@ section {
     transition: background-color 200ms ease-in-out;
     text-transform: uppercase;
     &:hover {
-      @include mixin.map-colors('background-color','belize-hole');
+      @include mixin.map-colors('background-color', 'belize-hole');
     }
   }
   svg {
@@ -565,10 +566,10 @@ section {
     line-height: 25px;
     border-radius: 6px;
     text-decoration: none;
-    @include mixin.map-colors('background-color','logocolor');
+    @include mixin.map-colors('background-color', 'logocolor');
     transition: background-color 200ms ease-in-out;
     &:hover {
-      @include mixin.map-colors('background-color','belize-hole');
+      @include mixin.map-colors('background-color', 'belize-hole');
     }
   }
   svg {
@@ -590,7 +591,7 @@ footer {
       margin-right: 0.5rem;
     }
     &:hover {
-      @include mixin.map-colors('color','belize-hole');
+      @include mixin.map-colors('color', 'belize-hole');
     }
     &:hover svg {
       fill: map-get($map: colors.$colors, $key: 'belize-hole');
@@ -638,7 +639,7 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    @include mixin.map-colors('background-color','belize-hole');
+    @include mixin.map-colors('background-color', 'belize-hole');
     transition: 400ms;
     &:before {
       position: absolute;
@@ -647,7 +648,7 @@ footer {
       width: 20px;
       left: 0;
       bottom: 0;
-      @include mixin.map-colors('background-color','white');
+      @include mixin.map-colors('background-color', 'white');
       transition: 200ms;
     }
     &.round {
@@ -666,7 +667,7 @@ footer {
 }
 
 input:checked + .switch__slider {
-  @include mixin.map-colors('background-color','peter-river');
+  @include mixin.map-colors('background-color', 'peter-river');
 }
 
 input:focus + .switch__slider {

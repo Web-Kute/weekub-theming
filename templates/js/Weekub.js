@@ -123,7 +123,7 @@ Weekub.prototype.addCustomers = function () {
           </figure>
           <div class="customers__description">
             <h3 class="customers__title">${customer.title}</h3>
-            <ul class="customers__summary">
+            <ul>
               ${customer.description}
             </ul>
             <a class="customers__link" href="${customer.url}" target="_blank" rel="noopener"

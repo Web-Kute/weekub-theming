@@ -67,8 +67,8 @@
     }
   }
 
-  .customers__summary {
-    @include mixin.map-colors('color', 'black-pearl');
+  .customers__description {
+    @include mixin.map-colors('color', 'wet-asphalt');
   }
 
   #contact {
