@@ -124,10 +124,12 @@ header {
       rgba(255, 255, 255, 0.9) 80%,
       rgba(255, 255, 255, 0) 100%
     );
+    padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
     justify-content: center;
     @include mixin.mobile-only() {
+      position: relative;
       flex-direction: column;
     }
   }
@@ -239,14 +241,19 @@ main {
 }
 
 // Hack because header is fixed, we need to modify the offset of anchors
-#skills, #about, #contact, #customers {
-  &::before {
-    display: block;
-    content: ' ';
-    margin-top: -90px;
-    height: 200px;
-    visibility: hidden;
-    pointer-events: none;
+#skills,
+#about,
+#contact,
+#customers {
+  @include mixin.tablet-portrait-up() {
+    &::before {
+      display: block;
+      content: ' ';
+      margin-top: -90px;
+      height: 200px;
+      visibility: hidden;
+      pointer-events: none;
+    }
   }
 }
 
@@ -639,6 +646,7 @@ footer {
   right: 20px;
   top: 20px;
   @include mixin.mobile-only() {
+    position: relative;
     right: 35px;
     top: 10px;
   }

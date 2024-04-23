@@ -30,12 +30,11 @@
 
   header {
     .logo {
-      // background: rgb(30, 39, 46);
       background: linear-gradient(
         180deg,
         rgba(30, 39, 46, 1) 0%,
-        rgba(30, 39, 46, 0.9) 80%,
-        rgba(30, 39, 46, 0.2) 100%
+        rgba(30, 39, 46, 0.9) 90%,
+        rgba(30, 39, 46, 0.5) 100%
       );
     }
   }
@@ -84,7 +83,6 @@
   }
 
   #contact {
-    // background-image: url(../images/slide2.jpg);
     background-image: none;
   }
 }
