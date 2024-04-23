@@ -2370,8 +2370,8 @@ var __webpack_exports__ = {};
 "use strict";
 
 ;// CONCATENATED MODULE: ./templates/js/Customers.js
-var BASE_URL = 'https://res.cloudinary.com/dwwhn7b5v/image/upload/';
-var IMAGE_URL = BASE_URL + 'c_fill,h_169,w_300/weekub/models-';
+var BASE_URL = './assets/images/';
+var IMAGE_EXT = '.webp';
 /**
  * @param {number} id - The customer ID
  * @param {string} title - The customer title
@@ -2384,134 +2384,134 @@ var IMAGE_URL = BASE_URL + 'c_fill,h_169,w_300/weekub/models-';
 var customersItem = [{
   customerId: 1,
   title: 'Antalis - E-commerce | 2023',
-  description: "<li>D\xE9veloppement des sliders produits,</li><li>Syst\xE8me atomic design</li><li>HTML | CSS | JavaScript / jQuery</li><li>Bootstrap</li>",
-  imageURL: IMAGE_URL + '9',
+  description: "<li>D\xE9veloppement des sliders produits,</li>\n                  <li>Syst\xE8me atomic design</li>\n                  <li>HTML | CSS | JavaScript / jQuery</li>\n                  <li>Bootstrap</li>",
+  imageURL: BASE_URL + 'antalis' + IMAGE_EXT,
   url: 'https://www.antalis.fr',
   label: 'Antalis'
 }, {
   customerId: 2,
   title: 'France TV | 2022',
-  description: "<li>D\xE9veloppement du player direct-radio</li><li>Mise en place de l'accessibilit\xE9</li><li>Optimisation de la performance</li><li>Twig | CSS / Sass | JavaScript</li>",
-  imageURL: IMAGE_URL + '17',
+  description: "<li>D\xE9veloppement du player direct-radio</li>\n                  <li>Mise en place de l'accessibilit\xE9</li>\n                  <li>Optimisation de la performance</li>\n                  <li>Twig | CSS / Sass | JavaScript</li>",
+  imageURL: BASE_URL + 'francetv' + IMAGE_EXT,
   url: 'https://la1ere.francetvinfo.fr/direct-radio/',
   label: 'France TV, la 1ere'
 }, {
   customerId: 3,
   title: 'Action contre la faim | 2021',
-  description: "<li>D\xE9veloppement de la modale cookies</li><li>Responsive</li><li>HTML | CSS / Sass | JavaScript </li>",
-  imageURL: IMAGE_URL + '7',
+  description: "<li>D\xE9veloppement de la modale cookies</li>\n                  <li>Responsive</li>\n                  <li>HTML | CSS / Sass | JavaScript </li>",
+  imageURL: BASE_URL + 'actioncontrelafaim' + IMAGE_EXT,
   url: 'https://www.actioncontrelafaim.org/',
   label: 'Action contre la faim'
 }, {
   customerId: 4,
   title: 'Christian Louboutin | 2019',
-  description: "<li>D\xE9veloppement de la FAQ</li><li>Int\xE9gration de templates pour Emails transactionnels</li><li>HTML | CSS | jQuery </li>",
-  imageURL: IMAGE_URL + '20',
+  description: "<li>D\xE9veloppement de la FAQ</li>\n                  <li>Int\xE9gration de templates pour Emails transactionnels</li>\n                  <li>HTML | CSS | jQuery </li>",
+  imageURL: BASE_URL + 'louboutin' + IMAGE_EXT,
   url: 'https://eu.christianlouboutin.com/fr_fr/',
   label: 'Christian Louboutin'
 }, {
   customerId: 5,
   title: 'Louis Vuitton | 2018 - 2019',
-  description: "<li>Site carri\xE8re LVMH from scratch</li><li>Mise en place de l'accessibilit\xE9</li><li>HTML | CSS / Less | jQuery</li>",
-  imageURL: IMAGE_URL + '21',
+  description: "<li>Site carri\xE8re LVMH from scratch</li>\n                  <li>Mise en place de l'accessibilit\xE9</li>\n                  <li>HTML | CSS / Less | jQuery</li>",
+  imageURL: BASE_URL + 'louisvuitton' + IMAGE_EXT,
   url: 'https://fr.louisvuitton.com/fra-fr/homepage',
   label: 'Louis Vuitton'
 }, {
   customerId: 6,
   title: 'Angelus Plongée | 2020',
-  description: "<li>WordPress, template vierge</li><li>Optimisation de la performance</li><li>Aspect UI / UX</li><li>S.E.O naturel</li><li>HTML | CSS | jQuery | Bootstrap</li>",
-  imageURL: IMAGE_URL + '8',
+  description: "<li>WordPress, template vierge</li>\n                  <li>Optimisation de la performance</li>\n                  <li>Aspect UI / UX</li>\n                  <li>S.E.O naturel</li>\n                  <li>HTML | CSS | jQuery | Bootstrap</li>",
+  imageURL: BASE_URL + 'angelusplongee' + IMAGE_EXT,
   url: 'https://angelus-plongee.com/',
   label: 'Angelus Plongée'
 }, {
   customerId: 7,
   title: "J'Irai marcher sur les Toits | 2020",
-  description: "<li>WordPress, template vierge</li><li>Optimisation de la performance</li><li>Aspect UI / UX</li><li>S.E.O naturel</li><li>HTML | CSS | jQuery | Bootstrap</li>",
-  imageURL: IMAGE_URL + '18',
+  description: "<li>WordPress, template vierge</li>\n                  <li>Optimisation de la performance</li>\n                  <li>Aspect UI / UX</li>\n                  <li>S.E.O naturel</li>\n                  <li>HTML | CSS | jQuery | Bootstrap</li>",
+  imageURL: BASE_URL + 'jirai' + IMAGE_EXT,
   url: 'https://jirai.fr/',
   label: "J'Irai marcher sur les Toits"
 }, {
   customerId: 8,
   title: 'OTAA Architecture | 2017',
-  description: "<li>WordPress, template vierge</li><li> HTML | CSS | jQuery</li>",
-  imageURL: IMAGE_URL + '3',
+  description: "<li>WordPress, template vierge</li>\n                  <li> HTML | CSS | jQuery</li>",
+  imageURL: BASE_URL + 'otaa' + IMAGE_EXT,
   url: 'https://www.otaa.fr/',
   label: 'OTAA architecture'
 }, {
   customerId: 9,
   title: 'Crédey & Associés | 2016',
-  description: "<li>WordPress, template vierge</li><li>HTML | CSS | jQuery</li>",
-  imageURL: IMAGE_URL + '13',
+  description: "<li>WordPress, template vierge</li>\n                  <li>HTML | CSS | jQuery</li>",
+  imageURL: BASE_URL + 'credey' + IMAGE_EXT,
   url: 'https://credey.com/fr/accueil/',
   label: 'Crédey & Associés'
 }, {
   customerId: 10,
   title: 'Dotline - Informatique | 2016',
-  description: "<li>WordPress, template vierge</li><li>HTML | CSS | jQuery</li>",
-  imageURL: IMAGE_URL + '15',
+  description: "<li>WordPress, template vierge</li>\n                  <li>HTML | CSS | jQuery</li>",
+  imageURL: BASE_URL + 'dotline' + IMAGE_EXT,
   url: 'https://www.dotline.fr/',
   label: 'Dotline - Informatique'
 }, {
   customerId: 11,
   title: 'Sodexo - Restauration | 2016',
-  description: "<li>Migration du site vers le CMS Jahia</li><li>Int\xE9gration du contenu</li>",
-  imageURL: IMAGE_URL + '24',
+  description: "<li>Migration du site vers le CMS Jahia</li>\n                  <li>Int\xE9gration du contenu</li>",
+  imageURL: BASE_URL + 'sodexo' + IMAGE_EXT,
   url: 'https://fr.sodexo.com/home.html',
   label: 'Sodexo'
 }, {
   customerId: 12,
   title: 'Bouygues Telecom | 2012',
-  description: "<li>Publicit\xE9 marketing</li><li>D\xE9veloppement Flash</li><li>HTML | CSS | ActionScript</li>",
-  imageURL: IMAGE_URL + '11',
+  description: "<li>Publicit\xE9 marketing</li>\n                  <li>D\xE9veloppement Flash</li>\n                  <li>HTML | CSS | ActionScript</li>",
+  imageURL: BASE_URL + 'bouyguestelecom' + IMAGE_EXT,
   url: 'https://www.bouyguestelecom.fr/',
   label: 'Bouygues Telecom'
 }, {
   customerId: 13,
   title: 'Société Générale | 2011',
-  description: "<li>Application board traders</li><li>D\xE9veloppement Flash</li><li>HTML | CSS | ActionScript</li>",
-  imageURL: IMAGE_URL + '23',
+  description: "<li>Application board traders</li>\n                  <li>D\xE9veloppement Flash</li>\n                  <li>HTML | CSS | ActionScript</li>",
+  imageURL: BASE_URL + 'societegenerale' + IMAGE_EXT,
   url: 'https://www.societegenerale.com/fr',
   label: 'Société Générale'
 }, {
   customerId: 14,
   title: 'Fondation Mallet | 2010',
-  description: "<li>D\xE9veloppement WordPress</li><li>HTML | CSS | Php</li>",
-  imageURL: IMAGE_URL + '16',
+  description: "<li>D\xE9veloppement WordPress</li>\n                  <li>HTML | CSS | Php</li>",
+  imageURL: BASE_URL + 'fondationmallet' + IMAGE_EXT,
   url: 'https://www.fondationmallet.fr/',
   label: 'Fondation Mallet'
 }, {
   customerId: 15,
   title: 'Raoul Follereau | 2010',
-  description: "<li>D\xE9veloppement WordPress</li><li>HTML | CSS | Php</li>",
-  imageURL: IMAGE_URL + '22',
+  description: "<li>D\xE9veloppement WordPress</li>\n                  <li>HTML | CSS | Php</li>",
+  imageURL: BASE_URL + 'raoulfollereau' + IMAGE_EXT,
   url: 'https://www.raoul-follereau.org/',
   label: 'Raoul Follereau'
 }, {
   customerId: 16,
   title: 'DNDi | 2009',
-  description: "<li>D\xE9veloppement WordPress</li><li>HTML | CSS</li>",
-  imageURL: IMAGE_URL + '14',
+  description: "<li>D\xE9veloppement WordPress</li>\n                  <li>HTML | CSS</li>",
+  imageURL: BASE_URL + 'dndi' + IMAGE_EXT,
   url: 'https://dndi.org/',
   label: 'DNDi'
 }, {
   customerId: 17,
   title: 'Lagardère - Presse | 2009',
-  description: "<li>D\xE9veloppement Intranet du livre blanc</li><li>HTML | CSS | Php</li>",
-  imageURL: IMAGE_URL + '19',
+  description: "<li>D\xE9veloppement Intranet du livre blanc</li>\n                  <li>HTML | CSS | Php</li>",
+  imageURL: BASE_URL + 'lagardere' + IMAGE_EXT,
   url: 'https://www.lagardere.com/',
   label: 'Lagardère'
 }, {
   customerId: 18,
   title: 'BNP Paribas - Banque | 2008',
-  description: "<li>Int\xE9gration landing page</li><li>HTML | CSS</li>",
-  imageURL: IMAGE_URL + '10',
+  description: "<li>Int\xE9gration landing page</li>\n                  <li>HTML | CSS</li>",
+  imageURL: BASE_URL + 'bnpparibas' + IMAGE_EXT,
   url: 'https://mabanque.bnpparibas/',
   label: 'BNP Paribas'
 }, {
   customerId: 19,
   title: 'Canal + | 2007',
-  description: "<li>Int\xE9gration landing page</li><li>HTML | CSS</li>",
-  imageURL: IMAGE_URL + '12',
+  description: "<li>Int\xE9gration landing page</li>\n                  <li>HTML | CSS</li>",
+  imageURL: BASE_URL + 'canalplus' + IMAGE_EXT,
   url: 'https://www.canalplus.com/',
   label: 'Canal +'
 }];
@@ -2526,25 +2526,25 @@ var customersItem = [{
 var skillItems = [{
   skillId: 1,
   title: 'Intégration HTML5',
-  description: "<li>Respect des standards du web</li><li>W3C, Markup Validation Service</li><li>Sensibilit\xE9 \xE0 l\u2019UX et UI Design</li>",
+  description: "<li>Respect des standards du web</li>\n                  <li>W3C, Markup Validation Service</li>\n                  <li>Sensibilit\xE9 \xE0 l\u2019UX et UI Design</li>",
   icon: ['#html5'],
   star: "&starf;&starf;&starf;&starf;&starf;"
 }, {
   skillId: 2,
   title: 'Feuille de style CSS3',
-  description: "<li>Dart Sass&nbsp;\n                  <a href=\"http://sass-lang.com/\" target=\"_blank\" rel=\"noopener\">\n                  <svg class=\"svg\" role=\"img\" aria-label=\"Sass\" focusable=\"false\">\n                  <use xlink:href=\"#sass\"></use>\n                  </svg>\n                  </a>\n                  ou\n                  <a href=\"http://lesscss.org/\" target=\"_blank\" rel=\"noopener\">\n                  <svg class=\"svg\" role=\"img\" aria-label=\"Less\" focusable=\"false\">\n                  <use xlink:href=\"#less\"></use>\n                  </svg></a></li><li>Gulp</li><li>M\xE9thodologie\n                  <a href=\"http://getbem.com/\" target=\"_blank\" rel=\"noopener\">BEM</a></li>",
+  description: "<li>Dart Sass&nbsp;\n                  <a href=\"http://sass-lang.com/\" target=\"_blank\" rel=\"noopener\">\n                  <svg class=\"svg\" role=\"img\" aria-label=\"Sass\" focusable=\"false\">\n                  <use xlink:href=\"#sass\"></use>\n                  </svg>\n                  </a>\n                  ou\n                  <a href=\"http://lesscss.org/\" target=\"_blank\" rel=\"noopener\">\n                  <svg class=\"svg\" role=\"img\" aria-label=\"Less\" focusable=\"false\">\n                  <use xlink:href=\"#less\"></use></svg></a></li>\n                  <li>Gulp</li>\n                  <li>M\xE9thodologie <a href=\"http://getbem.com/\" target=\"_blank\" rel=\"noopener\">BEM</a></li>",
   icon: ['#css3'],
   star: "&starf;&starf;&starf;&star;&star;"
 }, {
   skillId: 3,
   title: 'JavaScript',
-  description: "<li>Vanilla JavaScript (ES6)</li><li>Framework jQuery</li><li>Connection APIs</li>",
+  description: "<li>Vanilla JavaScript (ES6)</li>\n                  <li>Framework jQuery</li>\n                  <li>Connection APIs</li>",
   icon: ['#js'],
   star: "&starf;&starf;&starf;&star;&star;"
 }, {
   skillId: 4,
-  title: 'Environnement de travail',
-  description: "<li>Visual Studio Code</li>\n            <li>Jira</li>\n            <li>Confluence</li>\n            <li>M\xE9thode Agile - Scrum</li>\n            <li>Git / GitLab - CI/CD - Jenkins</li>\n            <li>Bundle via webpack</li>\n            <li>Docker</li>\n            <li>Photoshop</li>\n            <li>Adobe XD</li>\n            <li>Figma (r\xE9cup\xE9ration des maquettes et des assets)</li>\n            <li>Framework Symfony - Twig</li>\n            <li>Anglais (niveau A1)</li>",
+  title: 'Stack technique',
+  description: "<li>Visual Studio Code</li>\n            <li>Jira</li>\n            <li>Confluence</li>\n            <li>M\xE9thode Agile - Scrum</li>\n            <li>Git / GitLab - CI/CD - Jenkins</li>\n            <li>Webpack</li>\n            <li>Docker</li>\n            <li>Photoshop</li>\n            <li>Adobe XD</li>\n            <li>Figma (r\xE9cup\xE9ration des maquettes et des assets)</li>\n            <li>Framework Symfony - Twig</li>\n            <li>Anglais (niveau A1)</li>",
   icon: ['#tools'],
   star: ""
 }, {
@@ -2556,13 +2556,13 @@ var skillItems = [{
 }, {
   skillId: 6,
   title: 'Responsive',
-  description: "<li>Un site web responsive s'adapte aux diff\xE9rentes tailles d'\xE9crans,\n                  smartphone, PC, tablettes ou TV</li><li>Mobile First</li><li>Compatibilit\xE9 cross-navigateur</li>",
+  description: "<li>Un site web responsive s'adapte aux diff\xE9rentes tailles d'\xE9crans,\n                  smartphone, PC, tablettes ou TV</li>\n                  <li>Mobile First</li>\n                  <li>Compatibilit\xE9 cross-navigateur</li>",
   icon: ['#mobile', '#desktop', '#tablet'],
   star: "&starf;&starf;&starf;&starf;&starf;"
 }, {
   skillId: 7,
   title: 'Accessibilité RGAA',
-  description: "<li>Un site web accessible le rend utilisable par tout le monde, peu\n              importe l\u2019\xE2ge et le handicap.</li><li>Le r\xE9f\xE9rencement, la navigation et L'UX s'en trouveront \xE9galement\n              \xE0m\xE9lior\xE9s.</li>",
+  description: "<li>Un site web accessible le rend utilisable par tout le monde, peu\n                  importe l\u2019\xE2ge et le handicap.</li>\n                  <li>Le r\xE9f\xE9rencement, la navigation et L'UX s'en trouveront \xE9galement\n                  am\xE9lior\xE9s.</li>",
   icon: ['#a11y'],
   star: "&starf;&starf;&starf;&star;&star;"
 }, {
@@ -2661,7 +2661,7 @@ Weekub.prototype.addSkills = function () {
   var x = 0;
   skillItems.forEach(function (skill) {
     _this.elements.skillsContainer.innerHTML += "<div class=\"skills\">\n          <div class=\"skills__header\">\n            <h3 class=\"skills__title\">".concat(skill.title, "</h3>\n            <svg class=\"skills__icon svg\" aria-hidden=\"true\" focusable=\"false\">\n              ").concat(skill.icon.map(function (icon, i) {
-      return "<use x=\"".concat(i !== 0 ? x -= 20 : x = 0, "\" xlink:href=\"").concat(icon, "\"></use>");
+      return "<use x=\"".concat(i !== 0 ? x -= 30 : x = 0, "\" xlink:href=\"").concat(icon, "\"></use>");
     }), "\n            </svg>\n          </div>\n          <ul>\n            ").concat(skill.description, "\n          </ul>\n          <div class=\"skills__star\">").concat(skill.star, "</div>\n        </div>");
   });
 };

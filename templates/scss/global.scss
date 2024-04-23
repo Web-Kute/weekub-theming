@@ -475,12 +475,12 @@ section {
 }
 
 #contact {
-  background-image: url('https://res.cloudinary.com/dwwhn7b5v/image/upload/weekub/models-25');
+  background-image: url(../images/contact.webp);
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 3rem;
   @include mixin.tablet-landscape-down() {
-    background-image: url('https://res.cloudinary.com/dwwhn7b5v/image/upload/weekub/models-4');
+    background-image: url(../images/contact1200.webp);
     background-position: center;
   }
 }
