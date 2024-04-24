@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-{% set sections = [{id: 'about', title: 'À propos'}, {id: 'skills', title: 'Compétences'}, {id: 'customers', title:
-'Réalisations'}, {id: 'contact', title: 'Contact'}] %}
+{% set sections = [{id: 'about', title: 'À propos'}, {id: 'skills', title: 'Compétences'}, {id: 'customers', title: 'Réalisations'}, {id: 'contact', title: 'Contact'}] %}
 
 <html lang="fr" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
     {% block head %}
         <meta charset="UTF-8">
-        <meta name="description"
-            content="Denis Godec, Intégrateur HTML / CSS / JavaScript / WordPress Freelance, situé en région parisienne.">
-        <meta name="keywords"
-            content="freelance, indépendant, intégrateur HTML, CSS, JavaScript, html5, webdesign, figma, design system, photoshop, visual studio code, rgaa, accessibilité, site web, site internet, front-end, less, sass, gulp, bootstrap, WordPress, Adobe XD">
-        <meta name="author" content="Denis Godec">
+        <meta name="description" content="Denis Godec, Intégrateur HTML / CSS / JavaScript / WordPress Freelance, situé en région parisienne.">
+        <meta name="keywords" content="freelance, indépendant, intégrateur HTML, CSS, JavaScript, html5, webdesign, figma, design system, photoshop, visual studio code, rgaa, accessibilité, site web, site internet, front-end, less, sass, gulp, bootstrap, WordPress, Adobe XD">
+        <meta name="author" content="Denis Godec - WeeKub">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <meta name="format-detection" content="telephone=no">
-        <title>{% block title %}{% endblock %} Denis Godec, Intégrateur HTML / CSS / JavaScript / WordPress Freelance, situé en région
-        parisienne.</title>
-
-        <link rel="stylesheet" href="./assets/css/style.min.css">
+        <title>{% block title %}Denis Godec, Intégrateur HTML / CSS / JavaScript / WordPress Freelance, situé en région parisienne.{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="./assets/css/style.min.css">
+        {% endblock %}
         {% block javascripts %}
             <script src="./assets/js/main.js"></script>
         {% endblock %}
@@ -25,8 +22,7 @@
 </head>
 
 <body class="theme-dark">
-    {% block body %}       
-    {% endblock %}
+    {% block body %}{% endblock %}
     {% block footer %}
         {% include "content/footer.html" %}
     {% endblock %}

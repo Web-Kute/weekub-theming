@@ -2,9 +2,9 @@
   {{ include('atoms/burgermenu.html') }}
   <ul class="burgermenu hide" aria-expanded="false">
     {% for section in sections %}
-        <li class="burgermenu__list">
-            <a href="#{{ section.id }}" class="burgermenu__item" data-id="{{ section.id }}" aria-current="false">{{section.title}}</a>
-        </li>
+      <li class="burgermenu__list">
+        <a href="#{{ section.id }}" class="burgermenu__item" data-id="{{ section.id }}" aria-current="false">{{section.title}}</a>
+      </li>
     {% endfor %}
   </ul>
 </nav>

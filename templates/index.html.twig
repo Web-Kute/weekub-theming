@@ -1,13 +1,13 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-{{ include ("atoms/svg.html")}}
-{{ include('modules/header.html.twig') }}
+  {{ include ("atoms/svg.html")}}
+  {{ include('modules/header.html.twig') }}
   {% block content %}
-  <main role="main">
-    {% for section in sections %}
-      {% include 'organisms/section.html.twig' with {'title': section.title, 'id':section.id, "section_content": 'content/article_' ~ section.id ~ '.html'} %}
-    {% endfor %}
-  </main>
+    <main role="main">
+      {% for section in sections %}
+        {% include 'organisms/section.html.twig' with {'title': section.title, 'id':section.id, "section_content": 'content/article_' ~ section.id ~ '.html'} %}
+      {% endfor %}
+    </main>
   {% endblock %}
 {% endblock %}
