@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+{% set sections = [{id: 'about', title: 'À propos'}, {id: 'skills', title: 'Compétences'}, {id: 'customers', title:
+'Réalisations'}, {id: 'contact', title: 'Contact'}] %}
+
 <html lang="fr" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Denis Godec, Intégrateur HTML / CSS / JavaScript / WordPress Freelance, situé en région
-        parisienne.{% endblock %}</title>
+    {% block head %}
+        <meta charset="UTF-8">
         <meta name="description"
             content="Denis Godec, Intégrateur HTML / CSS / JavaScript / WordPress Freelance, situé en région parisienne.">
         <meta name="keywords"
@@ -12,18 +14,21 @@
         <meta name="author" content="Denis Godec">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <meta name="format-detection" content="telephone=no">
-    {% block stylesheets %}
-    <link rel="stylesheet" href="./assets/css/style.min.css">
-    {% endblock %}
+        <title>{% block title %}{% endblock %} Denis Godec, Intégrateur HTML / CSS / JavaScript / WordPress Freelance, situé en région
+        parisienne.</title>
 
-    {% block javascripts %}
-        <script src="./assets/js/main.js"></script>
+        <link rel="stylesheet" href="./assets/css/style.min.css">
+        {% block javascripts %}
+            <script src="./assets/js/main.js"></script>
+        {% endblock %}
     {% endblock %}
 </head>
 
 <body class="theme-dark">
-    {% block body %}
-       
+    {% block body %}       
+    {% endblock %}
+    {% block footer %}
+        {% include "content/footer.html" %}
     {% endblock %}
 </body>
 
