@@ -100,6 +100,7 @@ header {
   }
   .nav-open {
     .togglemenu__bar {
+      @include mixin.map-colors('background-color', 'white');
       &:nth-child(1) {
         @include mixin.crossBurger(45deg);
       }
@@ -108,6 +109,12 @@ header {
       }
       &:nth-child(3) {
         @include mixin.crossBurger(-45deg);
+      }
+    }
+    &.togglemenu {
+      &:hover {
+        transform-origin: center;
+        transform: rotate(45deg);
       }
     }
   }
@@ -159,8 +166,9 @@ header {
   position: fixed;
   z-index: 30;
   width: 35px;
-  height: 30px;
+  height: 35px;
   cursor: pointer;
+  transition-duration: 300ms;
   @include mixin.mobile-only() {
     width: 25px;
     left: 10px;
@@ -172,7 +180,7 @@ header {
     height: 5px;
     margin-top: 4px;
     border-radius: 10px;
-    background-color: currentColor;
+    @include mixin.map-colors('background-color', 'black-pearl');
     transition: transform 300ms ease;
     &:nth-child(2) {
       height: 3px;
@@ -213,9 +221,8 @@ main {
   height: 100vh;
   z-index: 20;
   padding: 5rem 10px;
-  border-left: 5px solid map-get($map: colors.$colors, $key: 'silver');
   border-top: 5px solid map-get($map: colors.$colors, $key: 'belize-hole');
-  @include mixin.map-colors('background-color', 'white');
+  @include mixin.map-colors('background-color', 'black-pearl');
   transform: translateX(-300px);
   transition: opacity 500ms ease;
   &__item {
@@ -233,7 +240,7 @@ main {
 
   a {
     text-decoration: none;
-    @include mixin.map-colors('color', 'belize-hole');
+    @include mixin.map-colors('color', 'white');
     &:hover {
       @include mixin.map-colors('color', 'logocolor');
     }
@@ -335,6 +342,7 @@ section {
     font-family: 'Roboto Regular', 'Droid Sans', 'Heveltica', Arial;
     margin-bottom: 1rem;
     font-size: clamp(2.2rem, 1.9605rem + 0.6397vw, 3rem);
+    text-transform: capitalize;
   }
 
   .about__content {
@@ -612,10 +620,12 @@ section {
 }
 
 footer {
-  height: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 10rem;
+  line-height: 30px;
+  @include mixin.map-colors('color', 'asbestos');
   .arrow-up {
     display: flex;
     justify-content: center;

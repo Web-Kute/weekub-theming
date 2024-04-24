@@ -2,6 +2,18 @@
 @use 'mixin';
 
 .theme-dark {
+  footer {
+    @include mixin.map-colors('color', 'silver');
+    a {
+      &.arrow-up {
+        @include mixin.map-colors('color', 'white');
+        transition: color 200ms ease;
+        &:hover {
+          @include mixin.map-colors('color', 'logocolor');
+        }
+      }
+    }
+  }
   a {
     &.contact__link {
       @include mixin.map-colors('color', 'white');
@@ -10,14 +22,22 @@
         color: map-get($map: colors.$colors, $key: 'logocolor');
       }
     }
-    &.arrow-up {
-      @include mixin.map-colors('color', 'white');
+  }
+  .burgermenu {
+    @include mixin.map-colors('background-color', 'white');
+    border-top: 5px solid map-get($map: colors.$colors, $key: 'carrot');
+    &__item {
+      &.active {
+        @include mixin.map-colors('color', 'logocolor');
+      }
+    }
+    a {
+      @include mixin.map-colors('color', 'belize-hole');
       &:hover {
         @include mixin.map-colors('color', 'logocolor');
       }
     }
   }
-
   .nav-open {
     .togglemenu__bar {
       @include mixin.map-colors('background-color', 'black-pearl');
