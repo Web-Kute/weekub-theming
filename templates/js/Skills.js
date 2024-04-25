@@ -27,18 +27,17 @@ export const skillItems = [
                   ou
                   <a href="http://lesscss.org/" target="_blank" rel="noopener">
                   <svg class="svg" role="img" aria-label="Less" focusable="false">
-                  <use xlink:href="#less"></use></svg></a></li>
-                  <li>Gulp</li>
+                  <use xlink:href="#less"></use></svg></a></li>                  
                   <li>Méthodologie <a href="http://getbem.com/" target="_blank" rel="noopener">BEM</a></li>`,
     icon: ['#css3'],
-    star: `&starf;&starf;&starf;&star;&star;`,
+    star: `&starf;&starf;&starf;&starf;&starf;`,
   },
   {
     skillId: 3,
     title: 'JavaScript',
     description: `<li>Vanilla JavaScript (ES6)</li>
-                  <li>Framework jQuery</li>
-                  <li>Connection APIs</li>`,
+                  <li>jQuery</li>
+                  <li>RESTful APIs</li>`,
     icon: ['#js'],
     star: `&starf;&starf;&starf;&star;&star;`,
   },
@@ -51,6 +50,7 @@ export const skillItems = [
             <li>Méthode Agile - Scrum</li>
             <li>Git / GitLab - CI/CD - Jenkins</li>
             <li>Webpack</li>
+            <li>Gulp</li>
             <li>Docker</li>
             <li>Photoshop</li>
             <li>Adobe XD</li>
@@ -90,7 +90,8 @@ export const skillItems = [
   {
     skillId: 8,
     title: 'WordPress',
-    description: `<li>Développement de thèmes sur mesure</li>`,
+    description: `<li>Développement de thèmes sur mesure</li>
+                  <li>Blank themes (Underscores, BlankSlate)</li>`,
     icon: ['#wordpress'],
     star: `&starf;&starf;&starf;&star;&star;`,
   },

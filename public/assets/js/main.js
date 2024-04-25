@@ -2532,19 +2532,19 @@ var skillItems = [{
 }, {
   skillId: 2,
   title: 'Feuille de style CSS3',
-  description: "<li>Dart Sass&nbsp;\n                  <a href=\"http://sass-lang.com/\" target=\"_blank\" rel=\"noopener\">\n                  <svg class=\"svg\" role=\"img\" aria-label=\"Sass\" focusable=\"false\">\n                  <use xlink:href=\"#sass\"></use>\n                  </svg>\n                  </a>\n                  ou\n                  <a href=\"http://lesscss.org/\" target=\"_blank\" rel=\"noopener\">\n                  <svg class=\"svg\" role=\"img\" aria-label=\"Less\" focusable=\"false\">\n                  <use xlink:href=\"#less\"></use></svg></a></li>\n                  <li>Gulp</li>\n                  <li>M\xE9thodologie <a href=\"http://getbem.com/\" target=\"_blank\" rel=\"noopener\">BEM</a></li>",
+  description: "<li>Dart Sass&nbsp;\n                  <a href=\"http://sass-lang.com/\" target=\"_blank\" rel=\"noopener\">\n                  <svg class=\"svg\" role=\"img\" aria-label=\"Sass\" focusable=\"false\">\n                  <use xlink:href=\"#sass\"></use>\n                  </svg>\n                  </a>\n                  ou\n                  <a href=\"http://lesscss.org/\" target=\"_blank\" rel=\"noopener\">\n                  <svg class=\"svg\" role=\"img\" aria-label=\"Less\" focusable=\"false\">\n                  <use xlink:href=\"#less\"></use></svg></a></li>                  \n                  <li>M\xE9thodologie <a href=\"http://getbem.com/\" target=\"_blank\" rel=\"noopener\">BEM</a></li>",
   icon: ['#css3'],
-  star: "&starf;&starf;&starf;&star;&star;"
+  star: "&starf;&starf;&starf;&starf;&starf;"
 }, {
   skillId: 3,
   title: 'JavaScript',
-  description: "<li>Vanilla JavaScript (ES6)</li>\n                  <li>Framework jQuery</li>\n                  <li>Connection APIs</li>",
+  description: "<li>Vanilla JavaScript (ES6)</li>\n                  <li>jQuery</li>\n                  <li>RESTful APIs</li>",
   icon: ['#js'],
   star: "&starf;&starf;&starf;&star;&star;"
 }, {
   skillId: 4,
   title: 'Stack technique',
-  description: "<li>Visual Studio Code</li>\n            <li>Jira</li>\n            <li>Confluence</li>\n            <li>M\xE9thode Agile - Scrum</li>\n            <li>Git / GitLab - CI/CD - Jenkins</li>\n            <li>Webpack</li>\n            <li>Docker</li>\n            <li>Photoshop</li>\n            <li>Adobe XD</li>\n            <li>Figma (r\xE9cup\xE9ration des maquettes et des assets)</li>\n            <li>Framework Symfony - Twig</li>\n            <li>Anglais (niveau A1)</li>",
+  description: "<li>Visual Studio Code</li>\n            <li>Jira</li>\n            <li>Confluence</li>\n            <li>M\xE9thode Agile - Scrum</li>\n            <li>Git / GitLab - CI/CD - Jenkins</li>\n            <li>Webpack</li>\n            <li>Gulp</li>\n            <li>Docker</li>\n            <li>Photoshop</li>\n            <li>Adobe XD</li>\n            <li>Figma (r\xE9cup\xE9ration des maquettes et des assets)</li>\n            <li>Framework Symfony - Twig</li>\n            <li>Anglais (niveau A1)</li>",
   icon: ['#tools'],
   star: ""
 }, {
@@ -2568,7 +2568,7 @@ var skillItems = [{
 }, {
   skillId: 8,
   title: 'WordPress',
-  description: "<li>D\xE9veloppement de th\xE8mes sur mesure</li>",
+  description: "<li>D\xE9veloppement de th\xE8mes sur mesure</li>\n                  <li>Blank themes (Underscores, BlankSlate)</li>",
   icon: ['#wordpress'],
   star: "&starf;&starf;&starf;&star;&star;"
 }];
