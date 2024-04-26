@@ -6,6 +6,7 @@ export function Weekub() {
   this.screenOrientation();
   this.addCustomers();
   this.addSkills();
+  this.heightSizeContact();
 }
 
 Weekub.prototype.registerElements = function () {
@@ -18,6 +19,7 @@ Weekub.prototype.registerElements = function () {
     arrowUp: document.querySelector('.arrow-up'),
     customerContent: document.querySelector('.customers__content'),
     btnSwitchTheme: document.getElementById('theme-switcher'),
+    sectionContact: document.getElementById('contact'),
   };
 };
 
@@ -142,4 +144,18 @@ Weekub.prototype.addCustomers = function () {
 Weekub.prototype.theming = function () {
   document.body.classList.toggle('theme-light') !=
     document.body.classList.toggle('theme-dark');
+};
+
+Weekub.prototype.heightSizeContact = function () {
+  const footerHeight = 140;
+  const heights = [document.documentElement.clientHeight, window.innerHeight];
+  const maxHeight = Math.max(...heights);
+  let vh = maxHeight;
+  if (vh > 0) {
+    const contactSectionFullHeight =
+      this.elements.sectionContact.getBoundingClientRect().height;
+
+    this.elements.sectionContact.style.paddingBottom =
+      vh - contactSectionFullHeight - footerHeight + 'px';
+  }
 };

@@ -92,7 +92,6 @@ header {
   grid-template-columns: 5% 90% 5%;
   margin: 0 auto;
   padding-bottom: 20px;
-  // border-bottom: 1px solid map-get($map: colors.$colors, $key: 'silver');
   nav {
     justify-self: start;
     margin-top: 20px;
@@ -247,7 +246,7 @@ main {
   }
 }
 
-// Hack because header is fixed, we need to modify the offset of anchors
+// Hack: because header is fixed, we need to modify the offset of anchors
 #skills,
 #about,
 #contact,
@@ -493,10 +492,6 @@ section {
   }
 }
 .contact {
-  padding-bottom: 60vh;
-  @include mixin.mobile-only() {
-    padding-bottom: 50vh;
-  }
   svg {
     margin-right: 0.5rem;
   }

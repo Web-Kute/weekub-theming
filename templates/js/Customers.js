@@ -180,6 +180,15 @@ export const customersItem = [
   },
   {
     customerId: 18,
+    title: 'Total | 2009',
+    description: `<li>Rapport annuel</li>
+                  <li>HTML | CSS | Php</li>`,
+    imageURL: BASE_URL + 'total' + IMAGE_EXT,
+    url: 'https://totalenergies.com/fr',
+    label: 'Total',
+  },
+  {
+    customerId: 19,
     title: 'BNP Paribas - Banque | 2008',
     description: `<li>Intégration landing page</li>
                   <li>HTML | CSS</li>`,
@@ -188,7 +197,7 @@ export const customersItem = [
     label: 'BNP Paribas',
   },
   {
-    customerId: 19,
+    customerId: 20,
     title: 'Canal + | 2007',
     description: `<li>Intégration landing page</li>
                   <li>HTML | CSS</li>`,
