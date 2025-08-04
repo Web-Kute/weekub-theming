@@ -65,7 +65,9 @@ Weekub.prototype.closeMenuOutSide = function (event) {
     event.target !== this.elements.burgerMenu &&
     !event.target.classList.contains('burgermenu__list')
   ) {
-    this.toggleMenuClasses(this.elements.toggleMenu, this.elements.burgerMenu, true);
+    if (this.elements.burgerMenu.classList.contains('show')) {
+      this.toggleMenuClasses(this.elements.toggleMenu, this.elements.burgerMenu, true);
+    }
   }
 };
 
