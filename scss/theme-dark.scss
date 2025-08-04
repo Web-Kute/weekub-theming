@@ -6,8 +6,8 @@
     @include mixin.map-colors('color', 'silver');
     a {
       &.arrow-up {
-        @include mixin.map-colors('color', 'white');
         transition: color 200ms ease;
+        @include mixin.map-colors('color', 'white');
         &:hover {
           @include mixin.map-colors('color', 'logocolor');
         }
@@ -16,16 +16,16 @@
   }
   a {
     &.contact__link {
-      @include mixin.map-colors('color', 'white');
       transition: color 200ms ease;
+      @include mixin.map-colors('color', 'white');
       &:hover {
         color: map-get($map: colors.$colors, $key: 'logocolor');
       }
     }
   }
   .burgermenu {
-    @include mixin.map-colors('background-color', 'white');
     border-top: 5px solid map-get($map: colors.$colors, $key: 'carrot');
+    @include mixin.map-colors('background-color', 'white');
     &__item {
       &.active {
         @include mixin.map-colors('color', 'logocolor');

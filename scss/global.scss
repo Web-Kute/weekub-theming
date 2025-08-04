@@ -9,8 +9,8 @@ html {
 
 body {
   font-family: 'Roboto', 'Droid Sans', 'Heveltica', Arial;
-  @include mixin.map-colors('color', 'wet-asphalt');
   transition: background-color 500ms ease-out;
+  @include mixin.map-colors('color', 'wet-asphalt');
 }
 
 * {
@@ -18,9 +18,9 @@ body {
 }
 
 a {
-  @include mixin.map-colors('color', 'midnight-blue');
   transition: color 200ms ease;
   text-decoration: none;
+  @include mixin.map-colors('color', 'midnight-blue');
   &:hover {
     @include mixin.map-colors('color', 'logocolor');
   }
@@ -82,8 +82,8 @@ h3 {
   font-size: 1.05rem;
   font-family: 'Roboto Medium', 'Droid Sans', 'Heveltica', Arial;
   text-transform: uppercase;
-  @include mixin.map-colors('color', 'belize-hole');
   margin-bottom: 0.5rem;
+  @include mixin.map-colors('color', 'belize-hole');
 }
 
 header {
@@ -150,9 +150,9 @@ header {
     }
   }
   figcaption {
-    @include mixin.map-colors('color', 'logocolor');
     text-align: center;
     letter-spacing: 1px;
+    @include mixin.map-colors('color', 'logocolor');
   }
   @include mixin.mobile-only() {
     flex-direction: column;
@@ -179,8 +179,8 @@ header {
     height: 5px;
     margin-top: 4px;
     border-radius: 10px;
-    @include mixin.map-colors('background-color', 'black-pearl');
     transition: transform 300ms ease;
+    @include mixin.map-colors('background-color', 'black-pearl');
     &:nth-child(2) {
       height: 3px;
     }
@@ -221,9 +221,9 @@ main {
   z-index: 20;
   padding: 5rem 10px;
   border-top: 5px solid map-get($map: colors.$colors, $key: 'belize-hole');
-  @include mixin.map-colors('background-color', 'black-pearl');
   transform: translateX(-300px);
   transition: opacity 500ms ease;
+  @include mixin.map-colors('background-color', 'black-pearl');
   &__item {
     font-family: 'Roboto Light', 'Droid Sans', 'Heveltica', Arial;
     font-size: 1.6rem;
@@ -359,8 +359,8 @@ section {
     ul > li {
       line-height: 25px;
       list-style-type: square;
-      @include mixin.map-colors('color', 'logocolor');
       margin-left: 2rem;
+      @include mixin.map-colors('color', 'logocolor');
       span {
         @include mixin.map-colors('color', 'wet-asphalt');
       }
@@ -458,15 +458,15 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    font-size: 1rem;
+    font-size: 0.875rem;
     width: 300px;
     height: 169px;
     padding: 10px;
     z-index: 8;
     top: 0;
-    @include mixin.map-colors('background-color', 'white');
     transform: translateY(100%);
     transition: transform 500ms ease;
+    @include mixin.map-colors('background-color', 'white');
     ul {
       @include mixin.mobile-landscape-down() {
         font-size: 14px;
@@ -482,12 +482,12 @@ section {
 }
 
 #contact {
-  background-image: url('../images/contact.webp');
+  background-image: url('../templates/assets/images/contact.webp');
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 3rem;
   @include mixin.tablet-landscape-down() {
-    background-image: url('../images/contact1200.webp');
+    background-image: url('../templates/assets/images/contact1200.webp');
     background-position: center;
   }
 }
@@ -555,13 +555,8 @@ section {
     align-items: center;
     min-width: 210px;
     max-width: 220px;
-    @include mixin.mobile-only() {
-      margin-left: 0;
-    }
     padding: 0.2rem 1rem;
     margin-left: 1rem;
-    @include mixin.map-colors('color', 'white');
-    @include mixin.map-colors('background-color', 'logocolor');
     text-align: center;
     font-size: 1.1rem;
     line-height: 25px;
@@ -570,6 +565,11 @@ section {
     text-decoration: none;
     transition: background-color 200ms ease-in-out;
     text-transform: uppercase;
+    @include mixin.mobile-only() {
+      margin-left: 0;
+    }
+    @include mixin.map-colors('color', 'white');
+    @include mixin.map-colors('background-color', 'logocolor');
     &:hover {
       @include mixin.map-colors('background-color', 'belize-hole');
     }
@@ -591,9 +591,6 @@ section {
   a {
     display: flex;
     align-items: center;
-    @include mixin.mobile-only() {
-      margin-left: 0;
-    }
     font-family: 'Roboto Medium', 'Droid Sans', 'Heveltica', Arial;
     color: map-get($map: colors.$colors, $key: 'white');
     padding: 0.2rem 0.8rem 0.2rem 0.2rem;
@@ -601,8 +598,11 @@ section {
     line-height: 25px;
     border-radius: 6px;
     text-decoration: none;
-    @include mixin.map-colors('background-color', 'logocolor');
     transition: background-color 200ms ease-in-out;
+    @include mixin.mobile-only() {
+      margin-left: 0;
+    }
+    @include mixin.map-colors('background-color', 'logocolor');
     &:hover {
       @include mixin.map-colors('background-color', 'belize-hole');
     }
@@ -681,8 +681,8 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    @include mixin.map-colors('background-color', 'belize-hole');
     transition: 400ms;
+    @include mixin.map-colors('background-color', 'belize-hole');
     &:before {
       position: absolute;
       content: '';
@@ -690,8 +690,8 @@ footer {
       width: 20px;
       left: 0;
       bottom: 0;
-      @include mixin.map-colors('background-color', 'white');
       transition: 200ms;
+      @include mixin.map-colors('background-color', 'white');
     }
     &.round {
       border-radius: 34px;

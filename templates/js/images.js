@@ -9,7 +9,7 @@ import credey from '../assets/images/credey.webp';
 import dotline from '../assets/images/dotline.webp';
 import fondationmallet from '../assets/images/fondationmallet.webp';
 import francetv from '../assets/images/francetv.webp';
-import jirai from '../assets/images/jirai.webp';
+import fabre from '../assets/images/fabre.webp';
 import lagardere from '../assets/images/lagardere.webp';
 import louboutin from '../assets/images/louboutin.webp';
 import louisVuitton from '../assets/images/louisvuitton.webp';
@@ -28,7 +28,7 @@ const sources = [
   dotline,
   fondationmallet,
   francetv,
-  jirai,
+  fabre,
   lagardere,
   louboutin,
   louisVuitton,
@@ -48,7 +48,7 @@ const imagesIds = [
   'dotline',
   'fondationmallet',
   'francetv',
-  'jirai',
+  'fabre',
   'lagardere',
   'louboutin',
   'louisvuitton',

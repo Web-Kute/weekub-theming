@@ -1,4 +1,4 @@
-const BASE_URL = './assets/images/';
+const BASE_URL = './templates/assets/images/';
 const IMAGE_EXT = '.webp';
 /**
  * @param {number} id - The customer ID
@@ -76,15 +76,14 @@ export const customersItem = [
   },
   {
     customerId: 7,
-    title: "J'Irai marcher sur les Toits | 2020",
-    description: `<li>WordPress, template vierge</li>
-                  <li>Optimisation de la performance</li>
+    title: 'Élisabeth Fabre | 2025',
+    description: `<li>WordPress, template Astra</li>                 
                   <li>Aspect UI / UX</li>
                   <li>S.E.O naturel</li>
-                  <li>HTML | CSS | jQuery | Bootstrap</li>`,
-    imageURL: BASE_URL + 'jirai' + IMAGE_EXT,
-    url: 'https://jirai.fr/',
-    label: "J'Irai marcher sur les Toits",
+                  <li>HTML | CSS | JavaScript</li>`,
+    imageURL: BASE_URL + 'fabre' + IMAGE_EXT,
+    url: 'https://elisabethfabre.com/',
+    label: 'Élisabeth Fabre',
   },
   {
     customerId: 8,

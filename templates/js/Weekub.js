@@ -4,8 +4,16 @@ export function Weekub() {
   this.registerElements();
   this.navHighlighter();
   this.screenOrientation();
-  this.addCustomers();
-  this.addSkills();
+  this.addContent(
+    this.elements.skillsContainer,
+    skillItems,
+    this.generateSkillHTML
+  );
+  this.addContent(
+    this.elements.customerContent,
+    customersItem,
+    this.generateCustomerHTML
+  );
   this.heightSizeContact();
 }
 
@@ -24,36 +32,31 @@ Weekub.prototype.registerElements = function () {
 };
 
 Weekub.prototype.events = function () {
-  this.elements.btnSwitchTheme.addEventListener(
+  this.addEvent(
+    this.elements.btnSwitchTheme,
     'change',
     this.theming.bind(this)
   );
-  document.addEventListener('click', this.closeMenuOutSide.bind(this));
-  window.addEventListener('scroll', this.navHighlighter.bind(this));
-  this.elements.toggleMenu.addEventListener(
+  this.addEvent(document, 'click', this.closeMenuOutSide.bind(this));
+  this.addEvent(window, 'scroll', this.navHighlighter.bind(this));
+  this.addEvent(
+    this.elements.toggleMenu,
     'click',
     this.showHideMenu.bind(this)
   );
-
-  this.elements.arrowUp.addEventListener('click', () =>
+  this.addEvent(this.elements.arrowUp, 'click', () =>
     window.scroll({ top: 0, left: 0, behavior: 'smooth' })
   );
 };
 
+Weekub.prototype.addEvent = function (element, event, handler) {
+  element.addEventListener(event, handler);
+};
+
 Weekub.prototype.showHideMenu = function (event) {
   event.stopPropagation();
-  this.elements.toggleMenu.classList.toggle('nav-open');
-  if (this.elements.burgerMenu.classList.contains('show')) {
-    this.elements.burgerMenu.classList.remove('show', 'in');
-    this.elements.burgerMenu.classList.add('out');
-    this.elements.burgerMenu.setAttribute('aria-expanded', false);
-    this.elements.toggleMenu.setAttribute('aria-expanded', false);
-  } else {
-    this.elements.burgerMenu.classList.add('show', 'in');
-    this.elements.burgerMenu.classList.remove('hide', 'out');
-    this.elements.burgerMenu.setAttribute('aria-expanded', true);
-    this.elements.toggleMenu.setAttribute('aria-expanded', true);
-  }
+  const isOpen = this.elements.burgerMenu.classList.contains('show');
+  this.toggleMenuClasses(this.elements.toggleMenu, this.elements.burgerMenu, isOpen);
 };
 
 Weekub.prototype.closeMenuOutSide = function (event) {
@@ -62,83 +65,84 @@ Weekub.prototype.closeMenuOutSide = function (event) {
     event.target !== this.elements.burgerMenu &&
     !event.target.classList.contains('burgermenu__list')
   ) {
-    this.elements.burgerMenu.classList.add('out');
-    this.elements.burgerMenu.classList.remove('show', 'in');
-    this.elements.burgerMenu.setAttribute('aria-expanded', false);
-    this.elements.toggleMenu.classList.remove('nav-open');
+    this.toggleMenuClasses(this.elements.toggleMenu, this.elements.burgerMenu, true);
   }
 };
 
+Weekub.prototype.toggleMenuClasses = function (
+  toggleMenu,
+  burgerMenu,
+  close = false
+) {
+  toggleMenu.classList.toggle('nav-open', !close);
+  burgerMenu.classList.toggle('show', !close);
+  burgerMenu.classList.toggle('in', !close);
+  burgerMenu.classList.toggle('out', close);
+  burgerMenu.setAttribute('aria-expanded', !close);
+  toggleMenu.setAttribute('aria-expanded', !close);
+};
+
 Weekub.prototype.navHighlighter = function () {
-  /* Get current scroll position */
   let scrollY = window.scrollY;
   this.elements.sections.forEach((current) => {
     const sectionTop = current.getBoundingClientRect().top + scrollY - 150;
     const itemBurgerMenu = document.querySelector(
-      `.burgermenu [data-id="${current.dataset.section}"`
+      `.burgermenu [data-id="${current.dataset.section}"]`
     );
-    /* If current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it */
-    if (scrollY > sectionTop && scrollY <= sectionTop + current.offsetHeight) {
-      itemBurgerMenu.classList.add('active');
-      itemBurgerMenu.setAttribute('aria-current', true);
-    } else {
-      itemBurgerMenu.classList.remove('active');
-      itemBurgerMenu.setAttribute('aria-current', false);
-    }
+    const isActive =
+      scrollY > sectionTop && scrollY <= sectionTop + current.offsetHeight;
+    itemBurgerMenu.classList.toggle('active', isActive);
+    itemBurgerMenu.setAttribute('aria-current', isActive);
   });
 };
 
 Weekub.prototype.screenOrientation = function () {
   const portrait = window.matchMedia('(orientation: portrait)');
-  portrait.addEventListener('change', (e) =>
-    e.matches ? location.reload() : location.reload()
-  );
+  portrait.addEventListener('change', () => location.reload());
 };
 
-Weekub.prototype.animFlag = function () {
-  requestAnimationFrame(() => {});
+Weekub.prototype.addContent = function (container, items, generateHTML) {
+  if (
+    !container ||
+    !Array.isArray(items) ||
+    typeof generateHTML !== 'function'
+  ) {
+    return;
+  }
+  container.innerHTML += items.map(generateHTML).join('');
 };
 
-Weekub.prototype.addSkills = function () {
+Weekub.prototype.generateSkillHTML = function (skill) {
   let x = 0;
-  skillItems.forEach((skill) => {
-    this.elements.skillsContainer.innerHTML += `<div class="skills">
-          <div class="skills__header">
-            <h3 class="skills__title">${skill.title}</h3>
-            <svg class="skills__icon svg" aria-hidden="true" focusable="false">
-              ${skill.icon.map((icon, i) => `<use x="${i !== 0 ? (x -= 30) : (x = 0)}" xlink:href="${icon}"></use>`)}
-            </svg>
-          </div>
-          <ul>
-            ${skill.description}
-          </ul>
-          <div class="skills__star">${skill.star}</div>
-        </div>`;
-  });
+  return `<div class="skills">
+    <div class="skills__header">
+      <h3 class="skills__title">${skill.title}</h3>
+      <svg class="skills__icon svg" aria-hidden="true" focusable="false">
+        ${skill.icon.map((icon, i) => `<use x="${i !== 0 ? (x -= 30) : (x = 0)}" xlink:href="${icon}"></use>`).join('')}
+      </svg>
+    </div>
+    <ul>${skill.description}</ul>
+    <div class="skills__star">${skill.star}</div>
+  </div>`;
 };
 
-Weekub.prototype.addCustomers = function () {
-  customersItem.forEach((customer) => {
-    this.elements.customerContent.innerHTML += `<div class="customers__item">
-      <figure aria-label="${customer.label}">
-            <img src="${customer.imageURL}" alt="Vignette ${customer.label}" width="300" height="169" loading="lazy">
-            <figcaption>${customer.label}</figcaption>
-          </figure>
-          <div class="customers__description">
-            <h3 class="customers__title">${customer.title}</h3>
-            <ul>
-              ${customer.description}
-            </ul>
-            <a class="customers__link" href="${customer.url}" target="_blank" rel="noopener"
-              aria-label="Ouvrir le site dans un nouvel onglet">
-              <svg class="customers__icon icon-alpha svg" aria-hidden="true" focusable="false">
-                <use xlink:href="#link-ext"></use>
-              </svg>
-              <span class="customers__url">Ouvrir le site</span>
-            </a>
-          </div>
-      </div>`;
-  });
+Weekub.prototype.generateCustomerHTML = function (customer) {
+  return `<div class="customers__item">
+    <figure aria-label="${customer.label}">
+      <img src="${customer.imageURL}" alt="Vignette ${customer.label}" width="300" height="169" loading="lazy">
+      <figcaption>${customer.label}</figcaption>
+    </figure>
+    <div class="customers__description">
+      <h3 class="customers__title">${customer.title}</h3>
+      <ul>${customer.description}</ul>
+      <a class="customers__link" href="${customer.url}" target="_blank" rel="noopener" aria-label="Ouvrir le site dans un nouvel onglet">
+        <svg class="customers__icon icon-alpha svg" aria-hidden="true" focusable="false">
+          <use xlink:href="#link-ext"></use>
+        </svg>
+        <span class="customers__url">Ouvrir le site</span>
+      </a>
+    </div>
+  </div>`;
 };
 
 Weekub.prototype.theming = function () {
@@ -154,7 +158,6 @@ Weekub.prototype.heightSizeContact = function () {
   if (vh > 0) {
     const contactSectionFullHeight =
       this.elements.sectionContact.getBoundingClientRect().height;
-
     this.elements.sectionContact.style.paddingBottom =
       vh - contactSectionFullHeight - footerHeight + 'px';
   }
