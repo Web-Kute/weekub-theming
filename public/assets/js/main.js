@@ -2617,7 +2617,9 @@ Weekub.prototype.events = function () {
   });
 };
 Weekub.prototype.addEvent = function (element, event, handler) {
-  element.addEventListener(event, handler);
+  if (element && typeof element.addEventListener === 'function' && typeof handler === 'function') {
+    element.addEventListener(event, handler);
+  }
 };
 Weekub.prototype.showHideMenu = function (event) {
   event.stopPropagation();
@@ -2673,7 +2675,8 @@ Weekub.prototype.generateCustomerHTML = function (customer) {
   return "<div class=\"customers__item\">\n    <figure aria-label=\"".concat(customer.label, "\">\n      <img src=\"").concat(customer.imageURL, "\" alt=\"Vignette ").concat(customer.label, "\" width=\"300\" height=\"169\" loading=\"lazy\">\n      <figcaption>").concat(customer.label, "</figcaption>\n    </figure>\n    <div class=\"customers__description\">\n      <h3 class=\"customers__title\">").concat(customer.title, "</h3>\n      <ul>").concat(customer.description, "</ul>\n      <a class=\"customers__link\" href=\"").concat(customer.url, "\" target=\"_blank\" rel=\"noopener\" aria-label=\"Ouvrir le site dans un nouvel onglet\">\n        <svg class=\"customers__icon icon-alpha svg\" aria-hidden=\"true\" focusable=\"false\">\n          <use xlink:href=\"#link-ext\"></use>\n        </svg>\n        <span class=\"customers__url\">Ouvrir le site</span>\n      </a>\n    </div>\n  </div>");
 };
 Weekub.prototype.theming = function () {
-  document.body.classList.toggle('theme-light') != document.body.classList.toggle('theme-dark');
+  var isLight = document.body.classList.toggle('theme-light');
+  document.body.classList.toggle('theme-dark', !isLight);
 };
 Weekub.prototype.heightSizeContact = function () {
   var footerHeight = 140;

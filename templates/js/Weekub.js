@@ -50,7 +50,9 @@ Weekub.prototype.events = function () {
 };
 
 Weekub.prototype.addEvent = function (element, event, handler) {
-  element.addEventListener(event, handler);
+  if (element && typeof element.addEventListener === 'function' && typeof handler === 'function') {
+    element.addEventListener(event, handler);
+  }
 };
 
 Weekub.prototype.showHideMenu = function (event) {
@@ -148,8 +150,8 @@ Weekub.prototype.generateCustomerHTML = function (customer) {
 };
 
 Weekub.prototype.theming = function () {
-  document.body.classList.toggle('theme-light') !=
-    document.body.classList.toggle('theme-dark');
+  const isLight = document.body.classList.toggle('theme-light');
+  document.body.classList.toggle('theme-dark', !isLight);
 };
 
 Weekub.prototype.heightSizeContact = function () {

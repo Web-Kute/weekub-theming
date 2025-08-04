@@ -2759,7 +2759,13 @@
       });
     };
     Weekub.prototype.addEvent = function (element, event, handler) {
-      element.addEventListener(event, handler);
+      if (
+        element &&
+        typeof element.addEventListener === 'function' &&
+        typeof handler === 'function'
+      ) {
+        element.addEventListener(event, handler);
+      }
     };
     Weekub.prototype.showHideMenu = function (event) {
       event.stopPropagation();
@@ -2869,8 +2875,8 @@
         );
     };
     Weekub.prototype.theming = function () {
-      document.body.classList.toggle('theme-light') !=
-        document.body.classList.toggle('theme-dark');
+      var isLight = document.body.classList.toggle('theme-light');
+      document.body.classList.toggle('theme-dark', !isLight);
     };
     Weekub.prototype.heightSizeContact = function () {
       var footerHeight = 140;
