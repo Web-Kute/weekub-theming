@@ -2712,6 +2712,8 @@
       this.registerElements();
       this.navHighlighter();
       this.screenOrientation();
+      // this.events();
+      // this.theming();
       this.addContent(
         this.elements.skillsContainer,
         skillItems,

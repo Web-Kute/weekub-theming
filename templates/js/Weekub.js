@@ -50,7 +50,11 @@ Weekub.prototype.events = function () {
 };
 
 Weekub.prototype.addEvent = function (element, event, handler) {
-  if (element && typeof element.addEventListener === 'function' && typeof handler === 'function') {
+  if (
+    element &&
+    typeof element.addEventListener === 'function' &&
+    typeof handler === 'function'
+  ) {
     element.addEventListener(event, handler);
   }
 };
@@ -58,7 +62,11 @@ Weekub.prototype.addEvent = function (element, event, handler) {
 Weekub.prototype.showHideMenu = function (event) {
   event.stopPropagation();
   const isOpen = this.elements.burgerMenu.classList.contains('show');
-  this.toggleMenuClasses(this.elements.toggleMenu, this.elements.burgerMenu, isOpen);
+  this.toggleMenuClasses(
+    this.elements.toggleMenu,
+    this.elements.burgerMenu,
+    isOpen
+  );
 };
 
 Weekub.prototype.closeMenuOutSide = function (event) {
@@ -68,7 +76,11 @@ Weekub.prototype.closeMenuOutSide = function (event) {
     !event.target.classList.contains('burgermenu__list')
   ) {
     if (this.elements.burgerMenu.classList.contains('show')) {
-      this.toggleMenuClasses(this.elements.toggleMenu, this.elements.burgerMenu, true);
+      this.toggleMenuClasses(
+        this.elements.toggleMenu,
+        this.elements.burgerMenu,
+        true
+      );
     }
   }
 };

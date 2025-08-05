@@ -2586,6 +2586,8 @@ function Weekub() {
   this.registerElements();
   this.navHighlighter();
   this.screenOrientation();
+  // this.events();
+  // this.theming();
   this.addContent(this.elements.skillsContainer, skillItems, this.generateSkillHTML);
   this.addContent(this.elements.customerContent, customersItem, this.generateCustomerHTML);
   this.heightSizeContact();
