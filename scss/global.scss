@@ -134,6 +134,7 @@ header {
     padding-bottom: 20px;
     width: 100%;
     justify-content: center;
+    border-bottom: 1px solid map-get($map: colors.$colors, $key: 'orange');
     @include mixin.mobile-only() {
       position: relative;
       flex-direction: column;
@@ -157,7 +158,7 @@ header {
   @include mixin.mobile-only() {
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 10px;
+    margin-top: 0;
   }
 }
 
@@ -171,7 +172,7 @@ header {
   @include mixin.mobile-only() {
     width: 25px;
     left: 10px;
-    top: 15px;
+    top: 24px;
   }
   &__bar {
     display: block;
@@ -196,6 +197,7 @@ main {
   @include mixin.mobile-only() {
     width: 97%;
     margin-left: 1rem;
+    margin-top: 0;
   }
   @include mixin.mobile-landscape() {
     width: 95%;
@@ -342,6 +344,11 @@ section {
     margin-bottom: 1rem;
     font-size: clamp(2.2rem, 1.9605rem + 0.6397vw, 3rem);
     text-transform: capitalize;
+    margin-top: 1rem;
+    @include mixin.map-colors('color', 'belize-hole');
+    @include mixin.mobile-only() {
+      margin-top: 0;
+    }
   }
 
   .about__content {
@@ -355,6 +362,10 @@ section {
     }
     p {
       font-size: 1.1rem;
+      line-height: 25px;
+      @include mixin.mobile-only() {
+        font-size: 1rem;
+      }
     }
     ul > li {
       line-height: 25px;
@@ -422,7 +433,9 @@ section {
     height: 169px;
     border: 1px solid map-get($map: colors.$colors, $key: 'silver');
     overflow: hidden;
-
+    @include mixin.mobile-only() {
+      max-width: 100%;
+    }
     figure {
       position: relative;
       figcaption {
@@ -466,6 +479,9 @@ section {
     top: 0;
     transform: translateY(100%);
     transition: transform 500ms ease;
+    @include mixin.mobile-only() {
+      width: 100%;
+    }
     @include mixin.map-colors('background-color', 'white');
     ul {
       @include mixin.mobile-landscape-down() {
@@ -482,12 +498,12 @@ section {
 }
 
 #contact {
-  background-image: url('../templates/assets/images/contact.webp');
+  background-image: url('../images/contact.webp');
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 3rem;
   @include mixin.tablet-landscape-down() {
-    background-image: url('../templates/assets/images/contact1200.webp');
+    background-image: url('../images/contact1200.webp');
     background-position: center;
   }
 }
@@ -651,12 +667,41 @@ footer {
   position: fixed;
   z-index: 20;
   height: 24px;
-  right: 20px;
-  top: 20px;
+  right: 50px;
+  top: 50px;
+  label {
+    &::after {
+      content: 'Blanc';
+      position: absolute;
+      top: 3px;
+      left: -40px;
+      font-size: 12px;
+      padding: 2px 5px;
+      border-radius: 5px;
+      color: map-get($map: colors.$colors, $key: 'black-pearl');
+      @include mixin.mobile-only() {
+        display: none;
+      }
+    }
+    &::before {
+      content: 'Noir';
+      position: absolute;
+      top: 3px;
+      right: -30px;
+      font-size: 12px;
+      padding: 2px 5px;
+      border-radius: 5px;
+      color: map-get($map: colors.$colors, $key: 'black-pearl');
+      @include mixin.mobile-only() {
+        display: none;
+      }
+    }
+  }
   @include mixin.mobile-only() {
     position: relative;
-    right: 35px;
-    top: 10px;
+    top: 25px;
+    scale: 0.6;
+    right: 25px;
   }
 }
 
@@ -750,8 +795,12 @@ input:checked + .switch__slider:before {
   align-items: center;
   row-gap: 2rem;
   width: 90%;
-  @include mixin.margin-auto;
+  h1 {
+    margin-top: 3rem;
+  }
   text-align: center;
+  @include mixin.map-colors('color', 'belize-hole');
+  @include mixin.margin-auto;
 }
 
 @keyframes pulse {

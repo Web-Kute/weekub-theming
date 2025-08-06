@@ -2,6 +2,14 @@
 @use 'mixin';
 
 .theme-dark {
+  #theme-toggle label{
+    &::after {
+      color: map-get($map: colors.$colors, $key: 'white');
+    }
+    &::before {
+      color: map-get($map: colors.$colors, $key: 'white');
+    }
+  }
   footer {
     @include mixin.map-colors('color', 'silver');
     a {
