@@ -2521,6 +2521,13 @@ var customersItem = [{
   imageURL: BASE_URL + 'canalplus' + IMAGE_EXT,
   url: 'https://www.canalplus.com/',
   label: 'Canal +'
+}, {
+  customerId: 21,
+  title: 'Marie Kiss La Joue | 2011',
+  description: "<li>Int\xE9gration from scratch</li>\n                  <li>HTML | CSS</li>",
+  imageURL: BASE_URL + 'mariekisslajoue' + IMAGE_EXT,
+  url: 'https://www.mariekisslajoue.fr/',
+  label: 'Marie Kiss La Joue'
 }];
 ;// CONCATENATED MODULE: ./templates/js/Skills.js
 /**
@@ -2575,9 +2582,9 @@ var skillItems = [{
 }, {
   skillId: 8,
   title: 'WordPress',
-  description: "<li>D\xE9veloppement de th\xE8mes sur mesure</li>\n                  <li>Blank themes (Underscores, BlankSlate)</li>",
+  description: "<li>D\xE9veloppement de th\xE8mes sur mesure</li>\n                  <li>Blank themes (Underscores, BlankSlate)</li>\n                  <li>Utilisation d\u2019ACF (Advanced Custom Fields)</li>\n                  <li>Optimisation des performances</li>\n                  <li>SEO de base</li>",
   icon: ['#wordpress'],
-  star: "&starf;&starf;&starf;&star;&star;"
+  star: "&starf;&starf;&starf;&starf;&star;"
 }];
 ;// CONCATENATED MODULE: ./templates/js/Weekub.js
 
@@ -2586,8 +2593,6 @@ function Weekub() {
   this.registerElements();
   this.navHighlighter();
   this.screenOrientation();
-  // this.events();
-  // this.theming();
   this.addContent(this.elements.skillsContainer, skillItems, this.generateSkillHTML);
   this.addContent(this.elements.customerContent, customersItem, this.generateCustomerHTML);
   this.heightSizeContact();
@@ -2690,7 +2695,7 @@ Weekub.prototype.heightSizeContact = function () {
     this.elements.sectionContact.style.paddingBottom = vh - contactSectionFullHeight - footerHeight + 'px';
   }
 };
-;// CONCATENATED MODULE: ./index.js
+;// CONCATENATED MODULE: ./src/index.js
 
 
 var Masonry = __webpack_require__(684);

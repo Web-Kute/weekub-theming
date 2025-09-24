@@ -13,11 +13,22 @@
         <meta name="format-detection" content="telephone=no">
         <title>{% block title %}Denis Godec, Intégrateur HTML / CSS / JavaScript / WordPress Freelance, situé en région parisienne.{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="templates/assets/css/styles.min.css">
+            <link rel="stylesheet" href="{{ asset('weekub-theme/public/assets/css/styles.min.css') }}">
         {% endblock %}
         {% block javascripts %}
-            <script src="templates/assets/js/main.js"></script>
+            <script src="http://localhost:8888/weekub-theme/public/assets/js/main.js"></script>
         {% endblock %}
+    {% endblock %}
+    {% block scripts %}
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0XQ65BJE3F"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-0XQ65BJE3F');
+        </script>
     {% endblock %}
 </head>
 
@@ -26,6 +37,7 @@
     {% block footer %}
         {% include "content/footer.html" %}
     {% endblock %}
+
 </body>
 
 </html>

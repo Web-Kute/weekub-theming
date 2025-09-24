@@ -204,4 +204,13 @@ export const customersItem = [
     url: 'https://www.canalplus.com/',
     label: 'Canal +',
   },
+  {
+    customerId: 21,
+    title: 'Marie Kiss La Joue | 2011',
+    description: `<li>Intégration from scratch</li>
+                  <li>HTML | CSS</li>`,
+    imageURL: BASE_URL + 'mariekisslajoue' + IMAGE_EXT,
+    url: 'https://www.mariekisslajoue.fr/',
+    label: 'Marie Kiss La Joue',
+  },
 ];

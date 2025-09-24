@@ -91,8 +91,11 @@ export const skillItems = [
     skillId: 8,
     title: 'WordPress',
     description: `<li>Développement de thèmes sur mesure</li>
-                  <li>Blank themes (Underscores, BlankSlate)</li>`,
+                  <li>Blank themes (Underscores, BlankSlate)</li>
+                  <li>Utilisation d’ACF (Advanced Custom Fields)</li>
+                  <li>Optimisation des performances</li>
+                  <li>SEO de base</li>`,
     icon: ['#wordpress'],
-    star: `&starf;&starf;&starf;&star;&star;`,
+    star: `&starf;&starf;&starf;&starf;&star;`,
   },
 ];

@@ -14,12 +14,13 @@ const stylesHandler = isProduction
 
 const config = {
   mode: 'development',
-  entry: './index.js',
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'public', 'assets', 'js'),
-    filename: '[name].js',
+    path: path.resolve(__dirname, 'public/assets'),
+    filename: 'js/[name].js',
+    publicPath: '/weekub-theme/public/assets/',
     clean: true,
-    assetModuleFilename: '[name][ext]',
+    assetModuleFilename: 'assets/[name][ext]',
   },
   devtool: 'source-map',
   devServer: {
@@ -38,18 +39,17 @@ const config = {
     minimizer: [new CssMinimizerPlugin()],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title:
-        'Intégrateur HTML, CSS, JavaScript / Symfony - Développeur front-end',
-      filename: 'index.html',
-      template: path.resolve(__dirname, 'templates', 'index.html.twig'),
-    }),
+    // new HtmlWebpackPlugin({
+    //   title:
+    //     'Intégrateur HTML, CSS, JavaScript / Symfony - Développeur front-end',
+    //   filename: 'index.html',
+    //   template: path.resolve(__dirname, 'templates', 'index.html.twig'),
+    // }),
 
     new MiniCssExtractPlugin({
-      filename: '../css/style.min.css',
+      filename: 'css/styles.min.css',
       chunkFilename: '[id].css',
     }),
-    require('autoprefixer'),
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
   module: {
@@ -71,7 +71,18 @@ const config = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [stylesHandler, 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [
+          stylesHandler,
+          {
+            loader: 'css-loader',
+            options: {
+              url: true,
+              importLoaders: 2,
+            },
+          },
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.css$/i,
@@ -80,35 +91,16 @@ const config = {
       {
         test: /\.(ico|png|svg|jpg|jpeg|gif|webp)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]',
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
-      },
-      {
-        test: /\.css$/i,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: { importLoaders: 1 },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [
-                  [
-                    'autoprefixer',
-                    {
-                      // Options
-                    },
-                  ],
-                ],
-              },
-            },
-          },
-        ],
+        generator: {
+          filename: 'fonts/[name][ext]',
+        },
       },
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/

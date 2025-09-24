@@ -1,0 +1,854 @@
+@use 'colors';
+@use 'mixin';
+@use 'functions';
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Roboto', 'Droid Sans', 'Heveltica', Arial;
+  transition: background-color 500ms ease-out;
+  @include mixin.map-colors('color', 'wet-asphalt');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  transition: color 200ms ease;
+  text-decoration: none;
+  @include mixin.map-colors('color', 'midnight-blue');
+  &:hover {
+    @include mixin.map-colors('color', 'logocolor');
+  }
+  &:active {
+    @include mixin.map-colors('color', 'carrot');
+  }
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px dotted currentColor;
+  outline-offset: 3px;
+}
+
+p {
+  line-height: 25px;
+}
+
+button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+blockquote {
+  margin: 0.5rem 0;
+}
+
+h1,
+h2 {
+  font-family: 'Roboto Light', 'Droid Sans', 'Heveltica', Arial;
+  @include mixin.map-colors('color', 'belize-hole');
+}
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 35px;
+  text-transform: uppercase;
+  &:nth-child(1) {
+    margin-top: 6px;
+  }
+  &:nth-child(2) {
+    margin-top: 1rem;
+    letter-spacing: 2px;
+    color: currentColor;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-family: 'Roboto Medium', 'Droid Sans', 'Heveltica', Arial;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  @include mixin.map-colors('color', 'belize-hole');
+}
+
+header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  nav {
+    justify-self: start;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .nav-open {
+    .togglemenu__bar {
+      @include mixin.map-colors('background-color', 'white');
+      &:nth-child(1) {
+        @include mixin.crossBurger(45deg);
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+      &:nth-child(3) {
+        @include mixin.crossBurger(-45deg);
+      }
+    }
+    &.togglemenu {
+      &:hover {
+        transform-origin: center;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  .logo {
+    display: flex;
+    column-gap: 1.5rem;
+    align-items: center;
+    justify-self: center;
+    position: fixed;
+    z-index: 9;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.9) 80%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid map-get($map: colors.$colors, $key: 'orange');
+    @include mixin.mobile-only() {
+      position: relative;
+      flex-direction: column;
+    }
+  }
+  h2 {
+    font-size: 1.8rem;
+    letter-spacing: -1.2px;
+    color: currentColor;
+  }
+  figure {
+    &:hover {
+      animation: pulse 1000ms;
+    }
+  }
+  figcaption {
+    text-align: center;
+    letter-spacing: 1px;
+    @include mixin.map-colors('color', 'logocolor');
+  }
+  @include mixin.mobile-only() {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+}
+
+.togglemenu {
+  position: fixed;
+  z-index: 30;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition-duration: 300ms;
+  @include mixin.mobile-only() {
+    width: 25px;
+    left: 10px;
+    top: 24px;
+  }
+  &__bar {
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-top: 4px;
+    border-radius: 10px;
+    transition: transform 300ms ease;
+    @include mixin.map-colors('background-color', 'black-pearl');
+    &:nth-child(2) {
+      height: 3px;
+    }
+    @include mixin.mobile-only() {
+      width: 25px;
+    }
+  }
+}
+main {
+  width: 80%;
+  margin-top: 50px;
+  @include mixin.margin-auto;
+  @include mixin.mobile-only() {
+    width: 97%;
+    margin-left: 1rem;
+    margin-top: 0;
+  }
+  @include mixin.mobile-landscape() {
+    width: 95%;
+    margin-left: 3rem;
+  }
+  @include mixin.tablet-portrait-only() {
+    width: 88%;
+  }
+  @include mixin.tablet-landscape-only() {
+    width: 88%;
+  }
+  @include mixin.desktop-only() {
+    width: 88%;
+  }
+}
+
+.burgermenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  z-index: 20;
+  padding: 5rem 10px;
+  border-top: 5px solid map-get($map: colors.$colors, $key: 'belize-hole');
+  transform: translateX(-300px);
+  transition: opacity 500ms ease;
+  @include mixin.map-colors('background-color', 'black-pearl');
+  &__item {
+    font-family: 'Roboto Light', 'Droid Sans', 'Heveltica', Arial;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    line-height: 35px;
+    &.active {
+      @include mixin.map-colors('color', 'logocolor');
+    }
+  }
+  li {
+    margin-left: 5px;
+  }
+
+  a {
+    text-decoration: none;
+    @include mixin.map-colors('color', 'white');
+    &:hover {
+      @include mixin.map-colors('color', 'logocolor');
+    }
+  }
+}
+
+// Hack: because header is fixed, we need to modify the offset of anchors
+#skills,
+#about,
+#contact,
+#customers {
+  @include mixin.tablet-portrait-up() {
+    &::before {
+      display: block;
+      content: ' ';
+      margin-top: -90px;
+      height: 200px;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+}
+
+#skills-container {
+  .grid-sizer,
+  .skills {
+    width: 18%;
+    @include mixin.mobile-only() {
+      width: 100%;
+    }
+    @include mixin.mobile-landscape() {
+      width: 45%;
+    }
+    @include mixin.tablet-landscape-only() {
+      width: 31%;
+    }
+    @include mixin.desktop-only() {
+      width: 23%;
+    }
+  }
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgba(
+      map-get($map: colors.$colors, $key: 'belize-hole'),
+      0.1
+    );
+    a {
+      border-bottom: 1px dashed
+        map-get($map: colors.$colors, $key: 'belize-hole');
+    }
+  }
+  li {
+    width: 85%;
+    line-height: 20px;
+  }
+}
+
+.skills {
+  &__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .icons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1px;
+    right: 10px;
+    top: 10px;
+  }
+  ul {
+    @include mixin.mobile-only() {
+      font-size: 14px;
+    }
+  }
+  &__star {
+    text-align: right;
+    margin-top: 10px;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+  @include mixin.mobile-only() {
+    padding: 12px 30px 20px 30px;
+  }
+  h2 {
+    font-family: 'Roboto Regular', 'Droid Sans', 'Heveltica', Arial;
+    margin-bottom: 1rem;
+    font-size: clamp(2.2rem, 1.9605rem + 0.6397vw, 3rem);
+    text-transform: capitalize;
+    margin-top: 1rem;
+    @include mixin.map-colors('color', 'belize-hole');
+    @include mixin.mobile-only() {
+      margin-top: 0;
+    }
+  }
+
+  .about__content {
+    h3 {
+      margin-bottom: 0;
+      text-transform: inherit;
+    }
+    a {
+      border-bottom: 1px dashed
+        map-get($map: colors.$colors, $key: 'belize-hole');
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 25px;
+      @include mixin.mobile-only() {
+        font-size: 1rem;
+      }
+    }
+    ul > li {
+      line-height: 25px;
+      list-style-type: square;
+      margin-left: 2rem;
+      @include mixin.map-colors('color', 'logocolor');
+      span {
+        @include mixin.map-colors('color', 'wet-asphalt');
+      }
+    }
+  }
+  svg {
+    width: 2em;
+    height: 2em;
+    fill: currentColor;
+    overflow: visible;
+    vertical-align: middle;
+    &.opquast {
+      width: 5em;
+    }
+  }
+}
+
+.customers__content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+
+  // display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  // gap: 20px;
+
+  @include mixin.mobile-only() {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  @include mixin.tablet-portrait-only() {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  @include mixin.tablet-landscape-only() {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  @include mixin.desktop-only() {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  a span {
+    border-bottom: 1px dashed map-get($map: colors.$colors, $key: 'belize-hole');
+  }
+}
+
+.customers {
+  &__item {
+    position: relative;
+    // max-width: 300px;
+    width: 100%;
+    height: 169px;
+    border: 1px solid map-get($map: colors.$colors, $key: 'silver');
+    overflow: hidden;
+    @include mixin.mobile-only() {
+      max-width: 100%;
+    }
+    figure {
+      position: relative;
+      figcaption {
+        position: absolute;
+        width: 100%;
+        top: 140px;
+        padding: 5px 0;
+        opacity: 0.9;
+        text-align: center;
+        font-size: 1rem;
+        text-transform: uppercase;
+        @include mixin.map-colors('color', 'belize-hole');
+        @include mixin.map-colors('background-color', 'white');
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 0;
+      }
+    }
+    &:hover .customers__description {
+      transform: translateY(0);
+    }
+    &:nth-child(7) {
+      h3 {
+        font-size: 15px;
+        letter-spacing: -0.5px;
+      }
+    }
+  }
+  &__description {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 0.875rem;
+    width: 100%;
+    height: 169px;
+    padding: 10px;
+    z-index: 8;
+    top: 0;
+    transform: translateY(100%);
+    transition: transform 500ms ease;
+    @include mixin.mobile-only() {
+      width: 100%;
+    }
+    @include mixin.map-colors('background-color', 'white');
+    ul {
+      @include mixin.mobile-landscape-down() {
+        font-size: 14px;
+      }
+    }
+    p {
+      line-height: 18px;
+    }
+    svg {
+      width: 1.2rem;
+    }
+  }
+}
+
+#contact {
+  background-image: url('../images/contact.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 3rem;
+  @include mixin.tablet-landscape-down() {
+    background-image: url('../images/contact1200.webp');
+    background-position: center;
+  }
+}
+.contact {
+  svg {
+    margin-right: 0.5rem;
+  }
+  span a {
+    border-bottom: 1px dashed map-get($map: colors.$colors, $key: 'belize-hole');
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+    grid-template-rows: 1fr;
+    gap: 30px;
+    .contact__name {
+      font-size: 1.3rem;
+      margin-bottom: 0;
+      text-transform: capitalize;
+    }
+    address {
+      margin: 20px 0;
+    }
+    &__col {
+      &:nth-child(2) {
+        p {
+          line-height: 40px;
+        }
+      }
+      .phone-icon {
+        transform: rotate(100deg);
+        fill: map-get($map: colors.$colors, $key: 'belize-hole');
+      }
+    }
+  }
+  &__item {
+    p {
+      line-height: 1;
+    }
+  }
+  &__subtitle {
+    font-weight: 100;
+    font-style: italic;
+  }
+  a.contact__link {
+    text-decoration: none;
+    span span {
+      border-bottom: 1px dashed
+        map-get($map: colors.$colors, $key: 'belize-hole');
+    }
+  }
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  @include mixin.mobile-only() {
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 210px;
+    max-width: 220px;
+    padding: 0.2rem 1rem;
+    margin-left: 1rem;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 25px;
+    font-family: 'Roboto Medium', 'Droid Sans', 'Heveltica', Arial;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 200ms ease-in-out;
+    text-transform: uppercase;
+    @include mixin.mobile-only() {
+      margin-left: 0;
+    }
+    @include mixin.map-colors('color', 'white');
+    @include mixin.map-colors('background-color', 'logocolor');
+    &:hover {
+      @include mixin.map-colors('background-color', 'belize-hole');
+    }
+  }
+  svg {
+    transform: rotate(100deg) scale(0.7);
+    margin-right: 0.3rem;
+    fill: map-get($map: colors.$colors, $key: 'white');
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  @include mixin.mobile-only() {
+    margin-left: 0;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto Medium', 'Droid Sans', 'Heveltica', Arial;
+    color: map-get($map: colors.$colors, $key: 'white');
+    padding: 0.2rem 0.8rem 0.2rem 0.2rem;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 200ms ease-in-out;
+    @include mixin.mobile-only() {
+      margin-left: 0;
+    }
+    @include mixin.map-colors('background-color', 'logocolor');
+    &:hover {
+      @include mixin.map-colors('background-color', 'belize-hole');
+    }
+  }
+  svg {
+    transform: scale(0.7);
+    margin-right: 0;
+    fill: map-get($map: colors.$colors, $key: 'white');
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 10rem;
+  line-height: 30px;
+  @include mixin.map-colors('color', 'asbestos');
+  .arrow-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    span {
+      margin-right: 0.5rem;
+    }
+    &:hover {
+      @include mixin.map-colors('color', 'belize-hole');
+    }
+    &:hover svg {
+      fill: map-get($map: colors.$colors, $key: 'belize-hole');
+    }
+  }
+  svg {
+    width: 2em;
+    height: 1.5em;
+    transform: scale(1.5);
+    &:hover {
+      fill: map-get($map: colors.$colors, $key: 'belize-hole');
+    }
+  }
+}
+
+#theme-toggle {
+  position: fixed;
+  z-index: 20;
+  height: 24px;
+  right: 50px;
+  top: 50px;
+  label {
+    &::after {
+      content: 'Blanc';
+      position: absolute;
+      top: 3px;
+      left: -40px;
+      font-size: 12px;
+      padding: 2px 5px;
+      border-radius: 5px;
+      color: map-get($map: colors.$colors, $key: 'black-pearl');
+      @include mixin.tablet-portrait-down() {
+        display: none;
+      }
+    }
+    &::before {
+      content: 'Noir';
+      position: absolute;
+      top: 3px;
+      right: -30px;
+      font-size: 12px;
+      padding: 2px 5px;
+      border-radius: 5px;
+      color: map-get($map: colors.$colors, $key: 'black-pearl');
+      @include mixin.tablet-portrait-down() {
+        display: none;
+      }
+    }
+  }
+  @include mixin.mobile-only() {
+    position: relative;
+    top: 25px;
+    scale: 0.6;
+    right: 25px;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 20px;
+  cursor: pointer;
+  &__title {
+    display: inline-block;
+    position: relative;
+    top: 8px;
+    font-size: 11px;
+    text-align: center;
+    line-height: 10px;
+  }
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 400ms;
+    @include mixin.map-colors('background-color', 'belize-hole');
+    &:before {
+      position: absolute;
+      content: '';
+      height: 20px;
+      width: 20px;
+      left: 0;
+      bottom: 0;
+      transition: 200ms;
+      @include mixin.map-colors('background-color', 'white');
+    }
+    &.round {
+      border-radius: 34px;
+      &:before {
+        border-radius: 50%;
+      }
+    }
+  }
+  /* Hide default HTML checkbox */
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+input:checked + .switch__slider {
+  @include mixin.map-colors('background-color', 'peter-river');
+}
+
+input:focus + .switch__slider {
+  box-shadow: 0 0 1px map-get($map: colors.$colors, $key: 'peter-river');
+}
+
+input:checked + .switch__slider:before {
+  transform: translateX(26px);
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.in {
+  animation: slide-in 400ms ease-out;
+  transform: translateX(0);
+}
+
+.out {
+  animation: slide-out 200ms ease-in;
+  transform: translateX(-300px);
+}
+
+.error404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  width: 90%;
+  h1 {
+    margin-top: 3rem;
+  }
+  text-align: center;
+  @include mixin.map-colors('color', 'belize-hole');
+  @include mixin.margin-auto;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+
+.animate-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.animate-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-text span.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
