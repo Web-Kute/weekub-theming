@@ -2370,7 +2370,7 @@ var __webpack_exports__ = {};
 "use strict";
 
 ;// CONCATENATED MODULE: ./templates/js/Customers.js
-var BASE_URL = './templates/assets/images/';
+var BASE_URL = './public/assets/images/';
 var IMAGE_EXT = '.webp';
 /**
  * @param {number} id - The customer ID

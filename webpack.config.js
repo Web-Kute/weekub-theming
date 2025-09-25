@@ -12,15 +12,17 @@ const stylesHandler = isProduction
   ? MiniCssExtractPlugin.loader
   : 'style-loader';
 
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 const config = {
   mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'public/assets'),
     filename: 'js/[name].js',
-    publicPath: '/weekub-theme/public/assets/',
+    publicPath: '',
     clean: true,
-    assetModuleFilename: 'assets/[name][ext]',
+    assetModuleFilename: 'images/[name][ext]',
   },
   devtool: 'source-map',
   devServer: {
@@ -39,12 +41,19 @@ const config = {
     minimizer: [new CssMinimizerPlugin()],
   },
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   title:
-    //     'Intégrateur HTML, CSS, JavaScript / Symfony - Développeur front-end',
-    //   filename: 'index.html',
-    //   template: path.resolve(__dirname, 'templates', 'index.html.twig'),
-    // }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/images'), // Dossier source
+          to: path.resolve(__dirname, 'public/assets/images'), // Dossier destination
+        },
+        {
+          from: path.resolve(__dirname, 'src/fonts'),
+          to: path.resolve(__dirname, 'public/assets/fonts'),
+          toType: 'dir', // Ensure directory structure is preserved
+        },
+      ],
+    }),
 
     new MiniCssExtractPlugin({
       filename: 'css/styles.min.css',
@@ -93,17 +102,27 @@ const config = {
         type: 'asset/resource',
         generator: {
           filename: 'images/[name][ext]',
+          publicPath: '',
         },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[name][ext]',
+          filename: ({ filename }) => {
+            // Extract the immediate parent folder (e.g., roboto, roboto-slab)
+            const relativePath = path.relative(
+              path.resolve(__dirname, 'src/fonts'),
+              filename
+            );
+            const folder = path.dirname(relativePath).split(path.sep)[0];
+            return `fonts/${folder}/[name][ext]`;
+          },
+          publicPath: '',
         },
+        include: path.resolve(__dirname, 'src/fonts'),
       },
-      // Add your rules for custom modules here
-      // Learn more about loaders from https://webpack.js.org/loaders/
+
     ],
   },
 };

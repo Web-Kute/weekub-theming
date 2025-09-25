@@ -1,4 +1,4 @@
-const BASE_URL = './templates/assets/images/';
+const BASE_URL = './public/assets/images/';
 const IMAGE_EXT = '.webp';
 /**
  * @param {number} id - The customer ID

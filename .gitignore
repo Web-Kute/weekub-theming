@@ -12,5 +12,6 @@
 /composer.json
 /composer.lock
 /symfony.lock
+/_public_html.zip
 ###< symfony/framework-bundle ###
 /node_modules/
