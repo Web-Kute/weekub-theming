@@ -7,6 +7,7 @@ const IMAGE_EXT = '.webp';
  * @param {string} imageURL - The URL of the customer image
  * @param {string} url - The customer URL
  * @param {string} label - The customer label
+ * @param {number} year - The year of the project
  */
 
 export const customersItem = [
@@ -20,6 +21,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'antalis' + IMAGE_EXT,
     url: 'https://www.antalis.fr',
     label: 'Antalis',
+    year: 2023,
   },
   {
     customerId: 2,
@@ -31,6 +33,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'francetv' + IMAGE_EXT,
     url: 'https://la1ere.francetvinfo.fr/direct-radio/',
     label: 'France TV, la 1ere',
+    year: 2022,
   },
   {
     customerId: 3,
@@ -41,6 +44,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'actioncontrelafaim' + IMAGE_EXT,
     url: 'https://www.actioncontrelafaim.org/',
     label: 'Action contre la faim',
+    year: 2021,
   },
   {
     customerId: 4,
@@ -51,6 +55,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'louboutin' + IMAGE_EXT,
     url: 'https://eu.christianlouboutin.com/fr_fr/',
     label: 'Christian Louboutin',
+    year: 2019,
   },
   {
     customerId: 5,
@@ -61,6 +66,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'louisvuitton' + IMAGE_EXT,
     url: 'https://fr.louisvuitton.com/fra-fr/homepage',
     label: 'Louis Vuitton',
+    year: 2018,
   },
   {
     customerId: 6,
@@ -73,6 +79,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'angelusplongee' + IMAGE_EXT,
     url: 'https://angelus-plongee.com/',
     label: 'Angelus Plongée',
+    year: 2020,
   },
   {
     customerId: 7,
@@ -84,6 +91,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'fabre' + IMAGE_EXT,
     url: 'https://elisabethfabre.com/',
     label: 'Élisabeth Fabre',
+    year: 2025,
   },
   {
     customerId: 8,
@@ -93,6 +101,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'otaa' + IMAGE_EXT,
     url: 'https://www.otaa.fr/',
     label: 'OTAA architecture',
+    year: 2017,
   },
   {
     customerId: 9,
@@ -102,6 +111,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'credey' + IMAGE_EXT,
     url: 'https://credey.com/fr/accueil/',
     label: 'Crédey & Associés',
+    year: 2016,
   },
   {
     customerId: 10,
@@ -111,6 +121,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'dotline' + IMAGE_EXT,
     url: 'https://www.dotline.fr/',
     label: 'Dotline - Informatique',
+    year: 2016,
   },
   {
     customerId: 11,
@@ -120,6 +131,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'sodexo' + IMAGE_EXT,
     url: 'https://fr.sodexo.com/home.html',
     label: 'Sodexo',
+    year: 2016,
   },
   {
     customerId: 12,
@@ -130,6 +142,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'bouyguestelecom' + IMAGE_EXT,
     url: 'https://www.bouyguestelecom.fr/',
     label: 'Bouygues Telecom',
+    year: 2012,
   },
   {
     customerId: 13,
@@ -140,6 +153,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'societegenerale' + IMAGE_EXT,
     url: 'https://www.societegenerale.com/fr',
     label: 'Société Générale',
+    year: 2011,
   },
   {
     customerId: 14,
@@ -149,6 +163,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'fondationmallet' + IMAGE_EXT,
     url: 'https://www.fondationmallet.fr/',
     label: 'Fondation Mallet',
+    year: 2010,
   },
   {
     customerId: 15,
@@ -158,6 +173,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'raoulfollereau' + IMAGE_EXT,
     url: 'https://www.raoul-follereau.org/',
     label: 'Raoul Follereau',
+    year: 2010,
   },
   {
     customerId: 16,
@@ -167,6 +183,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'dndi' + IMAGE_EXT,
     url: 'https://dndi.org/',
     label: 'DNDi',
+    year: 2009,
   },
   {
     customerId: 17,
@@ -176,6 +193,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'lagardere' + IMAGE_EXT,
     url: 'https://www.lagardere.com/',
     label: 'Lagardère',
+    year: 2009,
   },
   {
     customerId: 18,
@@ -185,6 +203,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'total' + IMAGE_EXT,
     url: 'https://totalenergies.com/fr',
     label: 'Total',
+    year: 2009,
   },
   {
     customerId: 19,
@@ -194,6 +213,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'bnpparibas' + IMAGE_EXT,
     url: 'https://mabanque.bnpparibas/',
     label: 'BNP Paribas',
+    year: 2008,
   },
   {
     customerId: 20,
@@ -203,6 +223,7 @@ export const customersItem = [
     imageURL: BASE_URL + 'canalplus' + IMAGE_EXT,
     url: 'https://www.canalplus.com/',
     label: 'Canal +',
+    year: 2007,
   },
   {
     customerId: 21,
@@ -212,5 +233,23 @@ export const customersItem = [
     imageURL: BASE_URL + 'mariekisslajoue' + IMAGE_EXT,
     url: 'https://www.mariekisslajoue.fr/',
     label: 'Marie Kiss La Joue',
+    year: 2011,
+  },
+  {
+    customerId: 22,
+    title: 'Longues Marches | 2025',
+    description: `<li>WordPress, thème personnalisé</li>
+                  <li>Aspect UI / UX</li>
+                  <li>S.E.O naturel</li>
+                  <li>Advanced Custom Fields</li>
+                  <li>HTML | CSS | JS | PHP</li>`,
+    imageURL: BASE_URL + 'longues-marches' + IMAGE_EXT,
+    url: 'https://www.longues-marches.fr/',
+    label: 'Longues Marches',
+    year: 2025,
   },
 ];
+
+export function getSortedCustomers() {
+  return [...customersItem].sort((a, b) => b.year - a.year);
+}

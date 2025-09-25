@@ -1,5 +1,6 @@
 import { customersItem } from './Customers';
 import { skillItems } from './Skills';
+import { getSortedCustomers } from './Customers';
 export function Weekub() {
   this.registerElements();
   this.navHighlighter();
@@ -9,10 +10,12 @@ export function Weekub() {
     skillItems,
     this.generateSkillHTML
   );
+  const sortedCustomers = getSortedCustomers();
   this.addContent(
     this.elements.customerContent,
-    customersItem,
+    sortedCustomers,
     this.generateCustomerHTML
+    // this.displayCustomers.bind(this)
   );
   this.heightSizeContact();
 }

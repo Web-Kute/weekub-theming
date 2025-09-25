@@ -416,7 +416,7 @@ section {
   }
 
   @include mixin.desktop-only() {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
   }
 
@@ -438,6 +438,7 @@ section {
     }
     figure {
       position: relative;
+      margin: 0;
       figcaption {
         position: absolute;
         width: 100%;
@@ -451,7 +452,11 @@ section {
         @include mixin.map-colors('background-color', 'white');
       }
       img {
+        aspect-ratio: 16/9;
         width: 100%;
+        height: auto;
+        max-height: 169px;
+        display: block;
         object-fit: cover;
         object-position: 0;
       }
@@ -845,7 +850,9 @@ input:checked + .switch__slider:before {
   display: inline-block;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 }
 
 .animate-text span.animate {
