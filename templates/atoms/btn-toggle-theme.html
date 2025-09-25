@@ -1,9 +1,17 @@
 <div id="theme-toggle">
   <fieldset>
-    <label class="switch" aria-label="Changer de thème" for="theme-switcher">
-      <input type="checkbox" id="theme-switcher" role="switch" aria-disabled="true">
+    <legend class="sr-only">Thème</legend>
+    <label class="switch" for="theme-switcher">
+      <input 
+        type="checkbox" 
+        id="theme-switcher" 
+        role="switch" 
+        aria-checked="false" 
+        aria-label="Changer de thème"
+        aria-disabled="true"
+      >
       <span class="switch__slider round"></span>
-      <span class="switch__title">Changer de thème</span>
+      <span class="switch__title" aria-hidden="true">Changer de thème</span>
     </label>
   </fieldset>
 </div>

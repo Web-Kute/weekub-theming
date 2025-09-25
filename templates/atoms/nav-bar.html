@@ -3,7 +3,10 @@
   <ul class="burgermenu" aria-expanded="false">
     {% for section in sections %}
       <li class="burgermenu__list">
-        <a href="#{{ section.id }}" class="burgermenu__item" data-id="{{ section.id }}" aria-current="false">{{section.title}}</a>
+        <a href="#{{ section.id }}" class="burgermenu__item" data-id="{{ section.id }}"
+          {% if section.isCurrent %}aria-current="page"{% endif %}>
+          {{ section.title }}
+        </a>
       </li>
     {% endfor %}
   </ul>

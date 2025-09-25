@@ -8,3 +8,10 @@
   {% endif %}
 </section>
 
+{# Accessibility: Add landmark role and aria-label if title is present #}
+{% if title is not empty %}
+  <script>
+    document.getElementById('{{ id }}').setAttribute('role', 'region');
+    document.getElementById('{{ id }}').setAttribute('aria-label', '{{ title | title }}');
+  </script>
+{% endif %}

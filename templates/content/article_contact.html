@@ -2,9 +2,9 @@
   <div class="contact__grid">
     <div class="contact__col col-address">
       <div class="contact__item">
-        <h3 itemprop="name" class="contact__name">
+        <h2 itemprop="name" class="contact__name">
           Denis Godec
-        </h3>
+        </h2>
         <div itemprop="jobTitle" class="contact__subtitle">
           <p><em>Intégrateur web</em></p>
           <p><em>Développeur Front-end</em></p>
@@ -12,13 +12,13 @@
         </div>
         <br>
         <div itemprop="url" content="https://weekub.fr/">
-          <svg class="svg">
+          <svg class="svg" aria-hidden="true" focusable="false">
             <use xlink:href="#desktop"></use>
           </svg>
-          <a class="contact__link" href="https://weekub.fr/">www.weekub.fr</a>
+          <a class="contact__link" href="https://weekub.fr/" aria-label="Site web de Denis Godec">www.weekub.fr</a>
         </div>
       </div>
-      <address class="contact__item" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+      <address class="contact__item" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
         <div itemprop="streetAddress">
           99 rue de Billancourt
         </div>
@@ -26,42 +26,44 @@
           92100
         </span>
         <span itemprop="addressLocality">
-          Boulogne-Billancourt
+          <span aria-label="Ville">Boulogne-Billancourt</span>
         </span>
       </address>
       <p class="contact__item">
-        <strong>N° SIRET : **** **** 7000 12</strong>
+        <strong>N° SIRET : <span aria-label="Numéro SIRET masqué">**** **** 7000 12</span></strong>
       </p>
     </div>
     <div class="contact__col col-phone">
       <div class="contact__item">
-        <a class="contact__link" href="mailto:denis.godec@weekub.fr">
+        <a class="contact__link" href="mailto:denis.godec@weekub.fr" aria-label="Envoyer un email à Denis Godec">
           <span class="contact__item-inner">
-            <svg class="contact__icon icon-alpha svg">
+            <svg class="contact__icon icon-alpha svg" aria-hidden="true" focusable="false">
               <use xlink:href="#email"></use>
             </svg>
             <span itemprop="email">
-              Denis Godec
+              denis.godec@weekub.fr
             </span>
           </span>
         </a>
       </div>
       <div class="contact__item">
         <a class="contact__link" href="https://www.linkedin.com/in/denis-godec-web-developper/"
-          title="Voir mon profil LinkedIn" target="_blank" rel="noopener">
+          title="Voir mon profil LinkedIn" target="_blank" rel="noopener" aria-label="Profil LinkedIn de Denis Godec">
           <span class="contact__item-inner">
-            <svg class="contact__icon icon-alpha svg">
+            <svg class="contact__icon icon-alpha svg" aria-hidden="true" focusable="false">
               <use xlink:href="#linkedin-squared"></use>
             </svg>
-            <span itemprop="linkedin">@denis-godec-995909155/</span>
+            <span itemprop="linkedin">denis-godec-995909155</span>
           </span>
         </a>
       </div>
       <div class="contact__item btn">
-        <a href="./public/assets/docs/CV_2024-02-08_Denis_Godec.pdf" download="CV_Denis-Godec" type="application/pdf">
-          <svg class="contact__icon icon-alpha svg">
+        <a href="./public/assets/docs/CV_2024-02-08_Denis_Godec.pdf" download="CV_Denis-Godec" type="application/pdf"
+          aria-label="Télécharger le CV de Denis Godec au format PDF">
+          <svg class="contact__icon icon-alpha svg" aria-hidden="true" focusable="false">
             <use xlink:href="#pdf-icon"></use>
-          </svg>Télécharger CV (100ko)&nbsp;<abbr title="Adobe Portable Document Format">pdf</abbr>
+          </svg>
+          Télécharger CV (100ko)&nbsp;<abbr title="Adobe Portable Document Format">pdf</abbr>
         </a>
       </div>
     </div>
