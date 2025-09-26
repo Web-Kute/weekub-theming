@@ -186,8 +186,8 @@
         d="M54.2375 12.2375L43.75 1.75C42.625 0.625003 41.1 -0.0124969 39.5125 -0.0124969H14C10.6875 3.05194e-06 8 2.6875 8 6V58C8 61.3125 10.6875 64 14 64H50C53.3125 64 56 61.3125 56 58V16.4875C56 14.9 55.3625 13.3625 54.2375 12.2375ZM51.4125 15.075C51.675 15.3375 51.85 15.65 51.9375 16H40V4.0625C40.35 4.15 40.6625 4.325 40.925 4.5875L51.4125 15.075ZM50 60H14C12.9 60 12 59.1 12 58V6C12 4.9 12.9 4 14 4H36V17C36 18.6625 37.3375 20 39 20H52V58C52 59.1 51.1 60 50 60ZM47.25 38.6C45.5625 36.9375 40.375 37.45 38.0375 37.7625C35.3875 36.1625 33.6375 33.9625 32.4 30.6875C32.9375 28.4375 33.9 24.7875 33.2 22.575C32.65 19.0625 28.2375 19.4875 27.625 21.725C27 24.0125 27.5875 27.275 28.675 31.45C27.1875 35 24.9625 39.8125 23.4125 42.525C20.8125 43.8625 16.65 46.1875 16.0625 49.075C15.625 51.175 18.925 54 22.7 49.875C23.8375 48.6375 25.1125 46.775 26.6125 44.1875C29.95 43.0875 33.625 41.7125 36.8625 41.1875C39.6 42.6875 42.8125 43.675 44.9375 43.675C48.4 43.6875 48.55 39.9 47.25 38.6ZM18.6 49.725C19.3375 47.7375 22.175 45.425 23.0375 44.625C20.275 49.0375 18.6 49.8125 18.6 49.725ZM30.5 21.9375C31.5875 21.9375 31.475 26.625 30.7625 27.8875C30.1125 25.85 30.1375 21.9375 30.5 21.9375ZM26.95 41.85C28.3625 39.375 29.575 36.45 30.55 33.8875C31.7625 36.1 33.3125 37.85 34.9375 39.075C31.9 39.6625 29.2625 40.9625 26.95 41.85ZM46.125 41.1125C46.125 41.1125 45.4 41.9875 40.6875 39.975C45.8125 39.6 46.65 40.775 46.125 41.1125Z" />
     </symbol>
   </svg>
-  <header role="banner" aria-label="Site Header">
-    <nav role="navigation" aria-label="Menu principal">
+  <header aria-label="Site Header">
+    <nav aria-label="Menu principal">
       <button class="togglemenu" aria-label="Burger menu principal" aria-expanded="false">
         <span class="togglemenu__bar">&nbsp;</span>
         <span class="togglemenu__bar">&nbsp;</span>
@@ -230,22 +230,20 @@
     </div>
     <div class="container" role="region" aria-label="Main Content">
       <div class="grid" role="list"></div>
+    </div>
 
-    </div>
-    </div>
     <div id="theme-toggle">
       <fieldset>
         <legend class="sr-only">Thème</legend>
         <label class="switch" for="theme-switcher">
-          <input type="checkbox" id="theme-switcher" role="switch" aria-checked="false" aria-label="Changer de thème"
-            aria-disabled="true">
+          <input type="checkbox" id="theme-switcher" role="switch" aria-label="Changer de thème" aria-disabled="true">
           <span class="switch__slider round"></span>
           <span class="switch__title" aria-hidden="true">Changer de thème</span>
         </label>
       </fieldset>
     </div>
   </header>
-  <main role="main">
+  <main>
     <section id="about" class="section" data-section="about">
       <h2>À Propos</h2>
       <article class="about__content">
@@ -291,9 +289,6 @@
     </script>
     <section id="skills" class="section" data-section="skills">
       <h2>Compétences</h2>
-      <div id="skills-container">
-        <div class="grid-sizer"></div>
-      </div>
       <div id="skills-container">
         <div class="grid-sizer"></div>
       </div>
