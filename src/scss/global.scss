@@ -56,8 +56,9 @@ blockquote {
 
 h1,
 h2 {
-  font-family: 'Roboto Light', 'Droid Sans', 'Heveltica', Arial;
-  @include mixin.map-colors('color', 'belize-hole');
+  font-family: 'Roboto', 'Droid Sans', 'Heveltica', Arial;
+  font-weight: 300;
+  @include mixin.map-colors('color', 'logocolor');
 }
 
 h1 {
@@ -83,7 +84,7 @@ h3 {
   font-family: 'Roboto Medium', 'Droid Sans', 'Heveltica', Arial;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
-  @include mixin.map-colors('color', 'belize-hole');
+  @include mixin.map-colors('color', 'pico-void');
   @include mixin.mobile-only() {
     letter-spacing: -1px;
   }
@@ -225,7 +226,7 @@ main {
   height: 100vh;
   z-index: 20;
   padding: 5rem 10px;
-  border-top: 5px solid map-get($map: colors.$colors, $key: 'belize-hole');
+  border-top: 5px solid map-get($map: colors.$colors, $key: 'pico-void');
   transform: translateX(-300px);
   transition: opacity 500ms ease;
   @include mixin.map-colors('background-color', 'black-pearl');
@@ -293,13 +294,10 @@ main {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    background-color: rgba(
-      map-get($map: colors.$colors, $key: 'belize-hole'),
-      0.1
-    );
+    background-color: rgba(map-get($map: colors.$colors, $key: 'clouds'), 0.5);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
     a {
-      border-bottom: 1px dashed
-        map-get($map: colors.$colors, $key: 'belize-hole');
+      border-bottom: 1px dashed map-get($map: colors.$colors, $key: 'pico-void');
     }
   }
   li {
@@ -348,7 +346,7 @@ section {
     font-size: clamp(2.2rem, 1.9605rem + 0.6397vw, 3rem);
     text-transform: capitalize;
     margin-top: 1rem;
-    @include mixin.map-colors('color', 'belize-hole');
+    @include mixin.map-colors('color', 'pico-void');
     @include mixin.mobile-only() {
       margin-top: 0;
     }
@@ -360,8 +358,10 @@ section {
       text-transform: inherit;
     }
     a {
-      border-bottom: 1px dashed
-        map-get($map: colors.$colors, $key: 'belize-hole');
+      border-bottom: 1px dashed map-get($map: colors.$colors, $key: 'pico-void');
+      &.btn {
+        border-bottom: none;
+      }
     }
     p {
       font-size: 1.1rem;
@@ -430,7 +430,7 @@ section {
   }
 
   a span {
-    border-bottom: 1px dashed map-get($map: colors.$colors, $key: 'belize-hole');
+    border-bottom: 1px dashed map-get($map: colors.$colors, $key: 'pico-void');
   }
 }
 
@@ -457,7 +457,7 @@ section {
         text-align: center;
         font-size: 1rem;
         text-transform: uppercase;
-        @include mixin.map-colors('color', 'belize-hole');
+        @include mixin.map-colors('color', 'pico-void');
         @include mixin.map-colors('background-color', 'white');
       }
       img {
@@ -526,7 +526,7 @@ section {
     margin-right: 0.5rem;
   }
   span a {
-    border-bottom: 1px dashed map-get($map: colors.$colors, $key: 'belize-hole');
+    border-bottom: 1px dashed map-get($map: colors.$colors, $key: 'pico-void');
   }
   &__grid {
     display: grid;
@@ -549,7 +549,7 @@ section {
       }
       .phone-icon {
         transform: rotate(100deg);
-        fill: map-get($map: colors.$colors, $key: 'belize-hole');
+        fill: map-get($map: colors.$colors, $key: 'pico-void');
       }
     }
   }
@@ -559,14 +559,13 @@ section {
     }
   }
   &__subtitle {
-    font-weight: 100;
-    font-style: italic;
+    font-weight: 300;
+    font-size: 0.875rem;
   }
   a.contact__link {
     text-decoration: none;
     span span {
-      border-bottom: 1px dashed
-        map-get($map: colors.$colors, $key: 'belize-hole');
+      border-bottom: 1px dashed map-get($map: colors.$colors, $key: 'pico-void');
     }
   }
 }
@@ -574,6 +573,7 @@ section {
 .cta {
   display: flex;
   align-items: center;
+  column-gap: 0.5rem;
   @include mixin.mobile-only() {
     flex-direction: column;
     margin-top: 1rem;
@@ -584,9 +584,7 @@ section {
     justify-content: center;
     align-items: center;
     min-width: 210px;
-    max-width: 220px;
-    padding: 0.2rem 1rem;
-    margin-left: 1rem;
+    padding: 0.2rem 0.8rem 0.2rem 0;
     text-align: center;
     font-size: 1.1rem;
     line-height: 25px;
@@ -599,9 +597,9 @@ section {
       margin-left: 0;
     }
     @include mixin.map-colors('color', 'white');
-    @include mixin.map-colors('background-color', 'logocolor');
+    @include mixin.map-colors('background-color', 'pico-void');
     &:hover {
-      @include mixin.map-colors('background-color', 'belize-hole');
+      @include mixin.map-colors('background-color', 'logocolor');
     }
   }
   svg {
@@ -628,13 +626,14 @@ section {
     line-height: 25px;
     border-radius: 6px;
     text-decoration: none;
+    border-bottom: none;
     transition: background-color 200ms ease-in-out;
     @include mixin.mobile-only() {
       margin-left: 0;
     }
-    @include mixin.map-colors('background-color', 'logocolor');
+    @include mixin.map-colors('background-color', 'pico-void');
     &:hover {
-      @include mixin.map-colors('background-color', 'belize-hole');
+      @include mixin.map-colors('background-color', 'logocolor');
     }
   }
   svg {
@@ -650,7 +649,7 @@ footer {
   align-items: center;
   height: 10rem;
   line-height: 30px;
-  @include mixin.map-colors('color', 'asbestos');
+  @include mixin.map-colors('color', 'pico-void');
   .arrow-up {
     display: flex;
     justify-content: center;
@@ -661,10 +660,10 @@ footer {
       margin-right: 0.5rem;
     }
     &:hover {
-      @include mixin.map-colors('color', 'belize-hole');
+      @include mixin.map-colors('color', 'pico-void');
     }
     &:hover svg {
-      fill: map-get($map: colors.$colors, $key: 'belize-hole');
+      fill: map-get($map: colors.$colors, $key: 'pico-void');
     }
   }
   svg {
@@ -672,7 +671,7 @@ footer {
     height: 1.5em;
     transform: scale(1.5);
     &:hover {
-      fill: map-get($map: colors.$colors, $key: 'belize-hole');
+      fill: map-get($map: colors.$colors, $key: 'pico-void');
     }
   }
 }
@@ -741,7 +740,7 @@ footer {
     right: 0;
     bottom: 0;
     transition: 400ms;
-    @include mixin.map-colors('background-color', 'belize-hole');
+    @include mixin.map-colors('background-color', 'pico-void');
     &:before {
       position: absolute;
       content: '';
@@ -813,7 +812,7 @@ input:checked + .switch__slider:before {
     margin-top: 3rem;
   }
   text-align: center;
-  @include mixin.map-colors('color', 'belize-hole');
+  @include mixin.map-colors('color', 'pico-void');
   @include mixin.margin-auto;
 }
 
@@ -851,7 +850,7 @@ input:checked + .switch__slider:before {
 
 .animate-text {
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 300;
   overflow: hidden;
 }
 

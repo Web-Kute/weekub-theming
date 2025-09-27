@@ -16,7 +16,7 @@
             <link rel="stylesheet" href="./public/assets/css/styles.min.css">
         {% endblock %}
     
-        {% block scripts %}
+        {# {% block scripts %}
             <!-- Google tag (gtag.js) -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-0XQ65BJE3F"></script>
             <script>
@@ -26,7 +26,7 @@
 
             gtag('config', 'G-0XQ65BJE3F');
             </script>
-        {% endblock %}
+        {% endblock %} #}
     {% endblock %}
 </head>
 
@@ -36,7 +36,7 @@
         {% include "content/footer.html" %}
     {% endblock %}
     {% block javascripts %}
-        <script src="./public/assets/js/main.js"></script>
+        <script src="./public/assets/js/main.js" defer></script>
     {% endblock %}
 </body>
 

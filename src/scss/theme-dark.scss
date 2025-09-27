@@ -31,6 +31,15 @@
       }
     }
   }
+
+.btn {
+    @include mixin.map-colors('background-color', 'white');
+    @include mixin.map-colors('color', 'black-pearl');
+    &:hover {
+      @include mixin.map-colors('background-color', 'logocolor');
+      @include mixin.map-colors('color', 'white');
+    }
+  }
   .burgermenu {
     border-top: 5px solid map-get($map: colors.$colors, $key: 'carrot');
     @include mixin.map-colors('background-color', 'white');
