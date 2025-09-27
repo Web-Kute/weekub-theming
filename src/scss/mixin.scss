@@ -103,6 +103,12 @@
   margin-right: auto;
 }
 
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin map-colors($property, $keycolor) {
   @if (map-has-key(colors.$colors, $keycolor)) {
     &#{''} {

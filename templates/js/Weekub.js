@@ -1,6 +1,7 @@
 import { customersItem } from './Customers';
 import { skillItems } from './Skills';
 import { getSortedCustomers } from './Customers';
+// import { initGSAP } from '.gsap';
 export function Weekub() {
   this.registerElements();
   this.navHighlighter();
@@ -181,3 +182,73 @@ Weekub.prototype.heightSizeContact = function () {
       vh - contactSectionFullHeight - footerHeight + 'px';
   }
 };
+
+document.addEventListener('DOMContentLoaded', function () {
+  const text = document.querySelector('h2.animate-text');
+  const cursorElement = document.querySelector('h2.animate-text::after');
+  // const textArr = document.querySelector('h2.animate-text::after');
+  // text.style.opacity = 0;
+  //  cursorElement.style.display = 'none';
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    text.textContent = 'HTML / CSS / JS';
+    return;
+    // Exit if user prefers reduced motion
+  } else {
+    gsap.registerPlugin(TextPlugin);
+
+    const textArr = [
+      'HTML/CSS/JS',
+      'WordPress',
+      'Bootstrap 5',
+      'Responsive',
+      'Accessibilité',
+      'UX & UI Design',
+      'SEO naturel',
+    ];
+
+    const getAnimFromIndex = (index) => ({
+      duration: 1.5,
+      repeat: 1,
+      repeatDelay: 2.2,
+      yoyo: true,
+      text: {
+        //this is the code that replaces the text
+        value: textArr[index],
+        delimiter: '',
+      },
+      ease: 'ease.in',
+    });
+
+    const getKeyFrames = () => {
+      const keyframes = [];
+      for (let i = 0; i < textArr.length; i++) {
+        keyframes.push(getAnimFromIndex(i));
+      }
+      return keyframes;
+    };
+
+    const tl1 = gsap.timeline();
+
+    tl1.to('span.cursor', {
+      keyframes: getKeyFrames(),
+      repeat: -1,
+    });
+
+    //cursor logic
+    //blink only when not typing or deleting
+
+    const tl2 = gsap.timeline();
+
+    tl2.to('.animate-text', {
+      keyframes: [
+        { '--typeCursorOpacity': 1, duration: 1, delay: 0 },
+        { '--typeCursorOpacity': 0, duration: 0, delay: 0.5 },
+        { '--typeCursorOpacity': 1, duration: 0, delay: 0.5 },
+        { '--typeCursorOpacity': 0, duration: 0, delay: 0.5 },
+        { '--typeCursorOpacity': 1, duration: 0, delay: 0.5 },
+        { '--typeCursorOpacity': 1, duration: 1, delay: 0 },
+      ],
+      repeat: -1,
+    });
+  }
+});
