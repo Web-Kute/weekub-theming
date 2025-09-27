@@ -137,7 +137,7 @@ Weekub.prototype.generateSkillHTML = function (skill) {
     <div class="skills__header">
       <h3 class="skills__title">${skill.title}</h3>
       <svg class="skills__icon svg" aria-hidden="true" focusable="false">
-        ${skill.icon.map((icon, i) => `<use x="${i !== 0 ? (x -= 30) : (x = 0)}" xlink:href="${icon}"></use>`).join('')}
+        ${skill.icon.map((icon, i) => `<use x="${ x = i === 1 ? -30 : i === 2 ? -63 : 0}" xlink:href="${icon}"></use>`).join('')}
       </svg>
     </div>
     <ul>${skill.description}</ul>

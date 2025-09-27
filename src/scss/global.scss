@@ -84,6 +84,9 @@ h3 {
   text-transform: uppercase;
   margin-bottom: 0.5rem;
   @include mixin.map-colors('color', 'belize-hole');
+  @include mixin.mobile-only() {
+    letter-spacing: -1px;
+  }
 }
 
 header {
@@ -196,7 +199,7 @@ main {
   @include mixin.margin-auto;
   @include mixin.mobile-only() {
     width: 97%;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     margin-top: 0;
   }
   @include mixin.mobile-landscape() {
@@ -337,7 +340,7 @@ section {
   margin: 0 auto;
   padding: 20px;
   @include mixin.mobile-only() {
-    padding: 12px 30px 20px 30px;
+    padding: 12px 10px 20px 30px;
   }
   h2 {
     font-family: 'Roboto Regular', 'Droid Sans', 'Heveltica', Arial;
@@ -364,16 +367,22 @@ section {
       font-size: 1.1rem;
       line-height: 25px;
       @include mixin.mobile-only() {
-        font-size: 1rem;
+        font-size: 0.875rem;
+        line-height: 20px;
       }
     }
     ul > li {
       line-height: 25px;
       list-style-type: square;
       margin-left: 2rem;
+      margin-bottom: 0.5rem;
       @include mixin.map-colors('color', 'logocolor');
       span {
         @include mixin.map-colors('color', 'wet-asphalt');
+      }
+      @include mixin.mobile-only() {
+        font-size: 0.875rem;
+        line-height: 18px;
       }
     }
   }
@@ -703,10 +712,10 @@ footer {
     }
   }
   @include mixin.mobile-only() {
-    position: relative;
+    position: absolute;
     top: 25px;
     scale: 0.6;
-    right: 25px;
+    right: 0;
   }
 }
 
@@ -841,7 +850,7 @@ input:checked + .switch__slider:before {
 }
 
 .animate-text {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   overflow: hidden;
 }
@@ -860,14 +869,14 @@ input:checked + .switch__slider:before {
   transform: translateY(0);
 }
 .sr-only {
-	border: 0 !important;
-	clip: rect(1px, 1px, 1px, 1px) !important;
-	-webkit-clip-path: inset(50%) !important;
-			clip-path: inset(50%) !important;
-	height: 1px !important;
-	overflow: hidden !important;
-	padding: 0 !important;
-	position: absolute !important;
-	width: 1px !important;
-	white-space: nowrap !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
 }

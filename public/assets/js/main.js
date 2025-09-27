@@ -2714,7 +2714,7 @@ Weekub.prototype.addContent = function (container, items, generateHTML) {
 Weekub.prototype.generateSkillHTML = function (skill) {
   var x = 0;
   return "<div class=\"skills\">\n    <div class=\"skills__header\">\n      <h3 class=\"skills__title\">".concat(skill.title, "</h3>\n      <svg class=\"skills__icon svg\" aria-hidden=\"true\" focusable=\"false\">\n        ").concat(skill.icon.map(function (icon, i) {
-    return "<use x=\"".concat(i !== 0 ? x -= 30 : x = 0, "\" xlink:href=\"").concat(icon, "\"></use>");
+    return "<use x=\"".concat(x = i === 1 ? -30 : i === 2 ? -63 : 0, "\" xlink:href=\"").concat(icon, "\"></use>");
   }).join(''), "\n      </svg>\n    </div>\n    <ul>").concat(skill.description, "</ul>\n    <div class=\"skills__star\">").concat(skill.star, "</div>\n  </div>");
 };
 Weekub.prototype.generateCustomerHTML = function (customer) {
