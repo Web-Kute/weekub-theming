@@ -1,4 +1,3 @@
-import { customersItem } from './Customers';
 import { skillItems } from './Skills';
 import { getSortedCustomers } from './Customers';
 export function Weekub() {

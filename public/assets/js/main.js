@@ -2369,6 +2369,63 @@ var __webpack_exports__ = {};
 !function() {
 "use strict";
 
+;// CONCATENATED MODULE: ./templates/js/Skills.js
+/**
+ * @param {number} id - The skill ID
+ * @param {string} title - The skill title
+ * @param {string} description - The skill description
+ * @param {string} icon - The icon name
+ * @param {string} star - The rating
+ */
+var skillItems = [{
+  skillId: 1,
+  title: 'Intégration HTML5',
+  description: "<li>Respect des standards du web</li>\n                  <li>W3C, Markup Validation Service</li>\n                  <li>Sensibilit\xE9 \xE0 l\u2019UX et UI Design</li>",
+  icon: ['#html5'],
+  star: "&starf;&starf;&starf;&starf;&starf;"
+}, {
+  skillId: 2,
+  title: 'Feuille de style CSS3',
+  description: "<li>Dart Sass&nbsp;\n                  <a href=\"http://sass-lang.com/\" target=\"_blank\" rel=\"noopener\">\n                  <svg class=\"svg\" role=\"img\" aria-label=\"Sass\" focusable=\"false\">\n                  <use xlink:href=\"#sass\"></use>\n                  </svg>\n                  </a>\n                  ou\n                  <a href=\"http://lesscss.org/\" target=\"_blank\" rel=\"noopener\">\n                  <svg class=\"svg\" role=\"img\" aria-label=\"Less\" focusable=\"false\">\n                  <use xlink:href=\"#less\"></use></svg></a></li>                  \n                  <li>M\xE9thodologie <a href=\"http://getbem.com/\" target=\"_blank\" rel=\"noopener\">BEM</a></li>",
+  icon: ['#css3'],
+  star: "&starf;&starf;&starf;&starf;&starf;"
+}, {
+  skillId: 3,
+  title: 'JavaScript',
+  description: "<li>Vanilla JavaScript (ES6)</li>\n                  <li>jQuery</li>\n                  <li>RESTful APIs</li>",
+  icon: ['#js'],
+  star: "&starf;&starf;&starf;&star;&star;"
+}, {
+  skillId: 4,
+  title: 'Stack technique',
+  description: "<li>Visual Studio Code</li>\n            <li>Jira</li>\n            <li>Confluence</li>\n            <li>M\xE9thode Agile - Scrum</li>\n            <li>Git / GitLab - CI/CD - Jenkins</li>\n            <li>Webpack</li>\n            <li>Gulp</li>\n            <li>Docker</li>\n            <li>Photoshop</li>\n            <li>Adobe XD</li>\n            <li>Figma (r\xE9cup\xE9ration des maquettes et des assets)</li>\n            <li>Framework Symfony - Twig</li>\n            <li>Anglais (niveau A1)</li>",
+  icon: ['#tools'],
+  star: ""
+}, {
+  skillId: 5,
+  title: 'Bootstrap 5',
+  description: "<li>Framework responsive</li>",
+  icon: ['#bootstrap'],
+  star: "&starf;&starf;&starf;&star;&star;"
+}, {
+  skillId: 6,
+  title: 'Responsive',
+  description: "<li>Un site web responsive s'adapte aux diff\xE9rentes tailles d'\xE9crans,\n                  smartphone, PC, tablettes ou TV</li>\n                  <li>Mobile First</li>\n                  <li>Compatibilit\xE9 cross-navigateur</li>",
+  icon: ['#mobile', '#desktop', '#tablet'],
+  star: "&starf;&starf;&starf;&starf;&starf;"
+}, {
+  skillId: 7,
+  title: 'Accessibilité RGAA',
+  description: "<li>Un site web accessible le rend utilisable par tout le monde, peu\n                  importe l\u2019\xE2ge et le handicap.</li>\n                  <li>Le r\xE9f\xE9rencement, la navigation et L'UX s'en trouveront \xE9galement\n                  am\xE9lior\xE9s.</li>",
+  icon: ['#a11y'],
+  star: "&starf;&starf;&starf;&star;&star;"
+}, {
+  skillId: 8,
+  title: 'WordPress',
+  description: "<li>D\xE9veloppement de th\xE8mes sur mesure</li>\n                  <li>Blank themes (Underscores, BlankSlate)</li>\n                  <li>Utilisation d\u2019ACF (Advanced Custom Fields)</li>\n                  <li>Optimisation des performances</li>\n                  <li>SEO de base</li>",
+  icon: ['#wordpress'],
+  star: "&starf;&starf;&starf;&starf;&star;"
+}];
 ;// CONCATENATED MODULE: ./templates/js/Customers.js
 var BASE_URL = './public/assets/images/';
 var IMAGE_EXT = '.webp';
@@ -2564,65 +2621,7 @@ function getSortedCustomers() {
     return b.year - a.year;
   });
 }
-;// CONCATENATED MODULE: ./templates/js/Skills.js
-/**
- * @param {number} id - The skill ID
- * @param {string} title - The skill title
- * @param {string} description - The skill description
- * @param {string} icon - The icon name
- * @param {string} star - The rating
- */
-var skillItems = [{
-  skillId: 1,
-  title: 'Intégration HTML5',
-  description: "<li>Respect des standards du web</li>\n                  <li>W3C, Markup Validation Service</li>\n                  <li>Sensibilit\xE9 \xE0 l\u2019UX et UI Design</li>",
-  icon: ['#html5'],
-  star: "&starf;&starf;&starf;&starf;&starf;"
-}, {
-  skillId: 2,
-  title: 'Feuille de style CSS3',
-  description: "<li>Dart Sass&nbsp;\n                  <a href=\"http://sass-lang.com/\" target=\"_blank\" rel=\"noopener\">\n                  <svg class=\"svg\" role=\"img\" aria-label=\"Sass\" focusable=\"false\">\n                  <use xlink:href=\"#sass\"></use>\n                  </svg>\n                  </a>\n                  ou\n                  <a href=\"http://lesscss.org/\" target=\"_blank\" rel=\"noopener\">\n                  <svg class=\"svg\" role=\"img\" aria-label=\"Less\" focusable=\"false\">\n                  <use xlink:href=\"#less\"></use></svg></a></li>                  \n                  <li>M\xE9thodologie <a href=\"http://getbem.com/\" target=\"_blank\" rel=\"noopener\">BEM</a></li>",
-  icon: ['#css3'],
-  star: "&starf;&starf;&starf;&starf;&starf;"
-}, {
-  skillId: 3,
-  title: 'JavaScript',
-  description: "<li>Vanilla JavaScript (ES6)</li>\n                  <li>jQuery</li>\n                  <li>RESTful APIs</li>",
-  icon: ['#js'],
-  star: "&starf;&starf;&starf;&star;&star;"
-}, {
-  skillId: 4,
-  title: 'Stack technique',
-  description: "<li>Visual Studio Code</li>\n            <li>Jira</li>\n            <li>Confluence</li>\n            <li>M\xE9thode Agile - Scrum</li>\n            <li>Git / GitLab - CI/CD - Jenkins</li>\n            <li>Webpack</li>\n            <li>Gulp</li>\n            <li>Docker</li>\n            <li>Photoshop</li>\n            <li>Adobe XD</li>\n            <li>Figma (r\xE9cup\xE9ration des maquettes et des assets)</li>\n            <li>Framework Symfony - Twig</li>\n            <li>Anglais (niveau A1)</li>",
-  icon: ['#tools'],
-  star: ""
-}, {
-  skillId: 5,
-  title: 'Bootstrap 5',
-  description: "<li>Framework responsive</li>",
-  icon: ['#bootstrap'],
-  star: "&starf;&starf;&starf;&star;&star;"
-}, {
-  skillId: 6,
-  title: 'Responsive',
-  description: "<li>Un site web responsive s'adapte aux diff\xE9rentes tailles d'\xE9crans,\n                  smartphone, PC, tablettes ou TV</li>\n                  <li>Mobile First</li>\n                  <li>Compatibilit\xE9 cross-navigateur</li>",
-  icon: ['#mobile', '#desktop', '#tablet'],
-  star: "&starf;&starf;&starf;&starf;&starf;"
-}, {
-  skillId: 7,
-  title: 'Accessibilité RGAA',
-  description: "<li>Un site web accessible le rend utilisable par tout le monde, peu\n                  importe l\u2019\xE2ge et le handicap.</li>\n                  <li>Le r\xE9f\xE9rencement, la navigation et L'UX s'en trouveront \xE9galement\n                  am\xE9lior\xE9s.</li>",
-  icon: ['#a11y'],
-  star: "&starf;&starf;&starf;&star;&star;"
-}, {
-  skillId: 8,
-  title: 'WordPress',
-  description: "<li>D\xE9veloppement de th\xE8mes sur mesure</li>\n                  <li>Blank themes (Underscores, BlankSlate)</li>\n                  <li>Utilisation d\u2019ACF (Advanced Custom Fields)</li>\n                  <li>Optimisation des performances</li>\n                  <li>SEO de base</li>",
-  icon: ['#wordpress'],
-  star: "&starf;&starf;&starf;&starf;&star;"
-}];
 ;// CONCATENATED MODULE: ./templates/js/Weekub.js
-
 
 
 function Weekub() {

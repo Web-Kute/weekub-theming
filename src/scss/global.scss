@@ -91,11 +91,23 @@ h3 {
 }
 
 header {
-  position: relative;
   display: grid;
   grid-template-columns: 5% 90% 5%;
   margin: 0 auto;
   padding-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
+  border-bottom: 1px solid map-get($map: colors.$colors, $key: 'logocolor');
+  position: fixed;
+  top: 0; /* Ensure it sticks to the top */
+  left: 0; /* Align to the left edge */
+  width: 100%; /* Span the full viewport width */
+  height: 150px;
+  z-index: 1000; /* Ensure it stays above other content */
+  @include mixin.mobile-only() {
+    position: relative;
+    height: auto;
+  }
   nav {
     justify-self: start;
     margin-top: 20px;
@@ -126,19 +138,11 @@ header {
     column-gap: 1.5rem;
     align-items: center;
     justify-self: center;
-    position: fixed;
     z-index: 9;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0.9) 80%,
-      rgba(255, 255, 255, 0) 100%
-    );
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
     justify-content: center;
-    border-bottom: 1px solid map-get($map: colors.$colors, $key: 'logocolor');
     @include mixin.mobile-only() {
       position: relative;
       flex-direction: column;
@@ -261,8 +265,6 @@ main {
     &::before {
       display: block;
       content: ' ';
-      margin-top: -90px;
-      height: 200px;
       visibility: hidden;
       pointer-events: none;
     }
@@ -329,6 +331,14 @@ main {
   &__star {
     text-align: right;
     margin-top: 10px;
+  }
+}
+
+// margin for anchor offset
+.section {
+  scroll-margin-top: 140px;
+  @include mixin.mobile-only() {
+    scroll-margin-top: 15px;
   }
 }
 

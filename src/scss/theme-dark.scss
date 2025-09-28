@@ -58,7 +58,7 @@
       }
     }
     a {
-      @include mixin.map-colors('color', 'belize-hole');
+      @include mixin.map-colors('color', 'pico-void');
       &:hover {
         @include mixin.map-colors('color', 'logocolor');
       }
