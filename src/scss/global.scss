@@ -95,8 +95,7 @@ header {
   grid-template-columns: 5% 90% 5%;
   margin: 0 auto;
   padding-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.6);
-  background-blend-mode: lighten;
+  background-color: map-get($map: colors.$colors, $key: 'snow');
   border-bottom: 1px solid map-get($map: colors.$colors, $key: 'logocolor');
   position: fixed;
   top: 0; /* Ensure it sticks to the top */
@@ -200,7 +199,7 @@ header {
 }
 main {
   width: 80%;
-  margin-top: 50px;
+  margin-top: 140px;
   @include mixin.margin-auto;
   @include mixin.mobile-only() {
     width: 97%;

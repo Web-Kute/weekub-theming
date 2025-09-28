@@ -75,14 +75,7 @@
   }
 
   header {
-    .logo {
-      background: linear-gradient(
-        180deg,
-        rgba(30, 39, 46, 1) 0%,
-        rgba(30, 39, 46, 0.9) 90%,
-        rgba(30, 39, 46, 0.5) 100%
-      );
-    }
+    background-color: map-get($map: colors.$colors, $key: 'black-pearl');
   }
 
   .about__content {

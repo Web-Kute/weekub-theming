@@ -222,7 +222,6 @@
     <div class="container" role="region" aria-label="Main Content">
       <div class="grid" role="list"></div>
     </div>
-
     <div id="theme-toggle">
       <fieldset>
         <legend class="sr-only">Thème</legend>
@@ -265,8 +264,8 @@
             </svg></a>
           <span>: 725 points.</span>
         </p>
-        <p class="cta"><strong>Pour connaître mes disponibilités :</strong>
-          <a href="#contact" aria-label="Contactez-moi !">
+        <p class="wrapper-cta"><strong>Pour connaître mes disponibilités :</strong>
+          <a class="btn-cta" href="#contact" aria-label="Contactez-moi !">
             <svg class="contact__icon icon-alpha svg">
               <use xlink:href="#phone"></use>
             </svg>Contactez-moi</a>
@@ -308,8 +307,7 @@
                 Denis Godec
               </h2>
               <div itemprop="jobTitle" class="contact__subtitle">
-                <p><em>Intégrateur web</em></p>
-                <p><em>Développeur Front-end</em></p>
+                <p><em>Intégrateur web</em> / <em>Développeur Front-end</em></p>
                 <p><em>Freelance</em></p>
               </div>
               <br>
@@ -361,9 +359,10 @@
                 </span>
               </a>
             </div>
-            <div class="contact__item btn">
-              <a href="./public/assets/docs/CV_2024-02-08_Denis_Godec.pdf" download="CV_Denis-Godec"
-                type="application/pdf" aria-label="Télécharger le CV de Denis Godec au format PDF">
+            <div class="contact__item cta">
+              <a class="btn" href="./public/docs/CV-Integrateur-Web_2025-09-23_Denis_Godec.pdf"
+                download="CV_Denis-Godec-Intégrateur-Web" type="application/pdf"
+                aria-label="Télécharger le CV de Denis Godec au format PDF">
                 <svg class="contact__icon icon-alpha svg" aria-hidden="true" focusable="false">
                   <use xlink:href="#pdf-icon"></use>
                 </svg>
@@ -388,9 +387,9 @@
         <use xlink:href="#arrow-up"></use>
       </svg>
     </a>
-    <span>&copy; Copyright 2024 - @WeeKub</span>
+    <span>&copy; Copyright 2025 - @WeeKub</span>
   </footer>
-  <script src="./public/assets/js/main.js"></script>
+  <script src="./public/assets/js/bundle.js" defer></script>
 </body>
 
 </html>
