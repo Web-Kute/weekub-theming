@@ -138,7 +138,7 @@ header {
     padding-bottom: 20px;
     width: 100%;
     justify-content: center;
-    border-bottom: 1px solid map-get($map: colors.$colors, $key: 'orange');
+    border-bottom: 1px solid map-get($map: colors.$colors, $key: 'logocolor');
     @include mixin.mobile-only() {
       position: relative;
       flex-direction: column;
@@ -606,6 +606,56 @@ section {
     transform: rotate(100deg) scale(0.7);
     margin-right: 0.3rem;
     fill: map-get($map: colors.$colors, $key: 'white');
+  }
+}
+
+.wrapper-cta {
+  @include mixin.mobile-only() {
+    margin-top: 1rem;
+  }
+  a.btn-cta {
+    color: map-get($map: colors.$colors, $key: 'logocolor');
+    border: 1px solid map-get($map: colors.$colors, $key: 'logocolor');
+    position: relative;
+    height: 50px;
+    padding: 7px 7px 7px 0;
+    display: inline-block;
+    overflow: visible;
+
+    &:hover {
+      color: map-get($map: colors.$colors, $key: 'white');
+    }
+    @include mixin.mobile-only() {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 40px;
+      font-size: 1.1rem;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 50px;
+      z-index: -1;
+      background-color: map-get($map: colors.$colors, $key: 'logocolor');
+      transition: width 300ms ease;
+      @include mixin.mobile-only() {
+        height: 40px;
+      }
+    }
+    &:hover::before {
+      width: 100%;
+    }
+    svg {
+      transform: rotate(100deg) scale(0.7);
+      margin-right: 0.3rem;
+    }
   }
 }
 

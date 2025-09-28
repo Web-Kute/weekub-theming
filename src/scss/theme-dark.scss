@@ -2,7 +2,12 @@
 @use 'mixin';
 
 .theme-dark {
-  #theme-toggle label{
+  .logo {
+    figcaption {
+      @include mixin.map-colors('color', 'white');
+    }
+  }
+  #theme-toggle label {
     &::after {
       color: map-get($map: colors.$colors, $key: 'white');
     }
@@ -31,8 +36,12 @@
       }
     }
   }
-
-.btn {
+  .wrapper-cta {
+    a.btn-cta {
+      @include mixin.map-colors('color', 'white');
+    }
+  }
+  .btn {
     @include mixin.map-colors('background-color', 'white');
     @include mixin.map-colors('color', 'black-pearl');
     &:hover {
@@ -94,7 +103,7 @@
   }
 
   header h2 {
-    @include mixin.map-colors('color', 'carrot');
+    @include mixin.map-colors('color', 'logocolor');
   }
 
   h3 {
