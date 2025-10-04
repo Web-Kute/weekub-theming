@@ -98,11 +98,11 @@ header {
   background-color: map-get($map: colors.$colors, $key: 'snow');
   border-bottom: 1px solid map-get($map: colors.$colors, $key: 'logocolor');
   position: fixed;
-  top: 0; /* Ensure it sticks to the top */
-  left: 0; /* Align to the left edge */
+  top: 0;
+  left: 0;
   width: 100%; /* Span the full viewport width */
   height: 150px;
-  z-index: 1000; /* Ensure it stays above other content */
+  z-index: 1000;
   @include mixin.mobile-only() {
     position: relative;
     height: auto;
@@ -414,10 +414,6 @@ section {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 
-  // display: grid;
-  // grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-  // gap: 20px;
-
   @include mixin.mobile-only() {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -446,7 +442,6 @@ section {
 .customers {
   &__item {
     position: relative;
-    // max-width: 300px;
     width: 100%;
     height: 169px;
     border: 1px solid map-get($map: colors.$colors, $key: 'silver');
@@ -521,12 +516,42 @@ section {
 }
 
 #contact {
-  background-image: url('../images/contact.webp');
+  background: linear-gradient(
+      to top,
+      rgba(255, 250, 255, 1),
+      rgba(255, 255, 255, 0)
+    ),
+    url('../images/contact.webp');
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#contact {
+  // background: linear-gradient(
+  //     to left,
+  //     rgba(255, 255, 255, 1),
+  //     rgba(255, 255, 255, 0)
+  //   ),
+  //   url('../images/contact.webp');
+  // background: linear-gradient(135deg, white, 60%, white),
+  //   url('../images/contact1200.webp');
+  // background: linear-gradient(135deg, white, 60%, white),
+  //   url('../images/contact.webp');
+  background-blend-mode: lighten;
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 3rem;
   @include mixin.tablet-landscape-down() {
-    background-image: url('../images/contact1200.webp');
+    background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0)
+      ),
+      url('../images/contact1200.webp');
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
   }
 }
